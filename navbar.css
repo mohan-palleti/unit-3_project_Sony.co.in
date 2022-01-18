@@ -1,0 +1,197 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+.nav_sm {
+  display: none;
+}
+.navbar {
+  /* background-color: black; */
+  display: flex;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.nav_list {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+#logo_sony {
+  height: 35px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+.nav_list > li {
+  list-style: none;
+  padding: 0px 15px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-size: medium;
+  border-bottom: 4px solid black;
+  /* cursor: pointer; */
+  transition-duration: 600ms;
+}
+.nav_list > li:hover {
+  border-bottom: 4px solid blue;
+}
+.nav_list li a {
+  text-decoration: none;
+  color: white;
+}
+.right_nav {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_nav > li {
+  background-color: black;
+  list-style: none;
+  color: white;
+  border: none;
+  font-size: small;
+  margin: 0px;
+  padding-left: 2px;
+
+  cursor: pointer;
+}
+.right_nav li p {
+  padding: 10px;
+}
+.fa-heart {
+  padding: 10px;
+}
+.right_nav > li :hover {
+  background-color: #2f353d;
+}
+#search_sony {
+  transition-duration: 500ms;
+}
+.right_nav > li > #search_sony:hover {
+  background-color: #5865f5;
+}
+.search_sony {
+  background-color: #2f353d;
+}
+.sony_sites {
+  background-color: #2f353d;
+}
+#ear_phone_man {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-image: url("https://thecanadiantechie.files.wordpress.com/2021/06/sony-wf-1000xm4-lifestyle-4.jpg");
+}
+/* for dropdown */
+.dropdown_list {
+  width: 1450%;
+  max-height: 700px;
+  /* background-color: white; */
+  transition-duration: 500ms;
+  margin-top: 20px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  display: none;
+  /* opacity: 0; */
+  transform: translateY(-15px);
+  transition: max-height 5s ease-in;
+}
+
+#dropdown_button {
+  position: relative;
+  /* display: inline-block; */
+}
+#dropdown_button:hover > .dropdown_list {
+  /* opacity: 1; */
+  display: block;
+  transform: translateY(0px);
+  max-height: 700px;
+
+  transition-duration: 250ms;
+  margin-left: -285%;
+  margin-top: 20px;
+  z-index: 1;
+}
+/* 
+for drop down menu list */
+.container_list {
+  text-align: left;
+  font-size: x-small;
+}
+.list_box1 {
+  display: flex;
+  margin-top: 45px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  line-height: 32px;
+}
+.list_box1 div {
+  padding-right: 70px;
+  border-right: 1px solid rgb(212, 212, 212);
+}
+.list_box1 span {
+  color: #5865f5;
+  font-weight: 600;
+}
+.container_list li {
+  list-style: "\00BB";
+  list-style-position: inside;
+  text-align: left;
+}
+.container_list li:hover {
+  cursor: pointer;
+  color: #5865f5;
+}
+.all_product_btn {
+  width: 100%;
+  padding: 25px 1px;
+  text-align: center;
+}
+.all_product_btn > button {
+  border: none;
+  color: white;
+  background-color: #5865f5;
+  width: 20%;
+  padding: 10px 1px;
+  margin-left: 40px;
+}
+.all_product_btn > button :hover {
+  background-color: #6e79f0;
+  cursor: pointer;
+}
+
+/* sign up drop down */
+.signup_dropdown {
+  display: none;
+  position: absolute;
+  width: 2 0%;
+  left: 0;
+  top: calc(100% + 0.59rem);
+  background-color: white;
+  padding: 0.75rem;
+  transform: translate(2px);
+  transition: height 1s ease-in;
+  z-index: 1;
+}
+.signup_dropdown > button {
+  width: 100%;
+  border: none;
+  background-color: #5865f5;
+  color: white;
+  padding: 10px 1px;
+}
+.my_sony_drop {
+  position: relative;
+}
+.my_sony_drop:hover .signup_dropdown {
+  display: block;
+  pointer-events: visible;
+  color: #5865f5;
+  background-color: white;
+}
