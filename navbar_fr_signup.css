@@ -1,0 +1,81 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+.nav_sm {
+  display: none;
+}
+.navbar {
+  /* background-color: black; */
+  display: flex;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.nav_list {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+#logo_sony {
+  height: 35px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+.nav_list > li {
+  list-style: none;
+  padding: 0px 15px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-size: medium;
+  border-bottom: 4px solid black;
+  /* cursor: pointer; */
+  transition-duration: 600ms;
+}
+.nav_list > li:hover {
+  border-bottom: 4px solid blue;
+}
+.nav_list li a {
+  text-decoration: none;
+  color: white;
+}
+.right_nav {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_nav > li {
+  background-color: black;
+  list-style: none;
+  color: white;
+  border: none;
+  font-size: small;
+  margin: 0px;
+  padding-left: 2px;
+
+  cursor: pointer;
+}
+.right_nav li p {
+  padding: 10px;
+}
+.fa-heart {
+  padding: 10px;
+}
+.right_nav > li :hover {
+  background-color: #2f353d;
+}
+#search_sony {
+  transition-duration: 500ms;
+}
+.right_nav > li > #search_sony:hover {
+  background-color: #5865f5;
+}
+.search_sony {
+  background-color: #2f353d;
+}
+.sony_sites {
+  background-color: #2f353d;
+}
