@@ -98,8 +98,8 @@
   opacity: 0;
   pointer-events: none;
 
-  transform: translateY(-10%);
-  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transform: translateY(-100%);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
   z-index: 100;
 }
 
@@ -172,8 +172,8 @@ for drop down menu list */
   background-color: white;
   padding: 0.75rem;
   pointer-events: none;
-  transform: translateY(-40%);
-  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transform: translateY(-100%);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   z-index: 100;
 }
 .signup_dropdown > button {
