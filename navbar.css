@@ -89,32 +89,28 @@
 .dropdown_list {
   width: 1450%;
   max-height: 700px;
-  /* background-color: white; */
-  transition-duration: 500ms;
   margin-top: 20px;
   position: absolute;
   background-color: white;
   color: black;
-  display: none;
-  /* opacity: 0; */
-  transform: translateY(-15px);
-  transition: max-height 5s ease-in;
+  margin-left: -285%;
+  margin-top: 20px;
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(-10%);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  z-index: 100;
 }
 
 #dropdown_button {
   position: relative;
   /* display: inline-block; */
 }
-#dropdown_button:hover > .dropdown_list {
-  /* opacity: 1; */
-  display: block;
+#dropdown_button:hover .dropdown_list {
+  opacity: 1;
+  pointer-events: visible;
   transform: translateY(0px);
-  max-height: 700px;
-
-  transition-duration: 250ms;
-  margin-left: -285%;
-  margin-top: 20px;
-  z-index: 1;
 }
 /* 
 for drop down menu list */
@@ -168,16 +164,17 @@ for drop down menu list */
 
 /* sign up drop down */
 .signup_dropdown {
-  display: none;
+  opacity: 0;
   position: absolute;
-  width: 2 0%;
+  width: 100%;
   left: 0;
-  top: calc(100% + 0.59rem);
+
   background-color: white;
   padding: 0.75rem;
-  transform: translate(2px);
-  transition: height 1s ease-in;
-  z-index: 1;
+  pointer-events: none;
+  transform: translateY(-40%);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  z-index: 100;
 }
 .signup_dropdown > button {
   width: 100%;
@@ -190,7 +187,8 @@ for drop down menu list */
   position: relative;
 }
 .my_sony_drop:hover .signup_dropdown {
-  display: block;
+  opacity: 1;
+  transform: translateY(0%);
   pointer-events: visible;
   color: #5865f5;
   background-color: white;
