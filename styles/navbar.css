@@ -166,9 +166,8 @@ for drop down menu list */
 .signup_dropdown {
   opacity: 0;
   position: absolute;
-  width: 100%;
+  width: 170px;
   left: 0;
-
   background-color: white;
   padding: 0.75rem;
   pointer-events: none;
@@ -182,6 +181,7 @@ for drop down menu list */
   background-color: #5865f5;
   color: white;
   padding: 10px 1px;
+  cursor: pointer;
 }
 .my_sony_drop {
   position: relative;
