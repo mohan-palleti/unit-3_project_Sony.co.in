@@ -1,0 +1,54 @@
+@media only screen and (min-width: 0px) and (max-width: 376px) {
+  .navbar {
+    display: block;
+    height: 320px;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+  }
+
+  #logo_sony{
+    margin-top: 20px;
+  }
+
+  .navbar_sm {
+    height: 2px;
+  }
+  .v_class_nav {
+    opacity: 0;
+  }
+  .nav_list,
+  .right_nav {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  .nav_list > a {
+    display: none;
+  }
+
+  .nav_sm {
+    display: block;
+    height: 75px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+  }
+
+  .burger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 15px;
+  }
+
+  .line {
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 6px 3px;
+  }
+
+  .slider-box-1>div>img{
+    width: 460px;
+  }
+}
