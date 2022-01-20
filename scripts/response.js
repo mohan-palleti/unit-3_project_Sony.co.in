@@ -37,3 +37,20 @@ btn3.onclick = function()
     btn2.classList.remove("active");
     btn1.classList.remove("active");
 }
+
+// for search box
+let drop_search=document.querySelector(".drop_down_search");
+
+
+
+let searchbutton= document.querySelector("#search_sony")
+searchbutton.addEventListener("click",()=>{
+  
+    if(drop_search.style.display==="none"){
+        drop_search.style.display="block"
+        drop_search.style.pointerEvents="all";
+    }else{
+        drop_search.style.display="none"
+    }
+ 
+});
