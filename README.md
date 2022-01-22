@@ -1,5 +1,3 @@
-<div id="top"></div>
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -30,13 +28,13 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites-&-installation">Pre-requisites & Installation</a></li>
-        <!-- <li><a href="#installation">Installation</a></li> -->
+        <li><a href="#Prerequisites-and-installation">Pre-requisites & Installation</a></li>
       </ul>
     </li>
-    <li><a href="#Usage & Features">Usage & Features </a></li>
+    <li><a href="#usage-and-features">Usage & Features </a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributors</a></li>
+    <li><a href="#contributors">Contributors</a></li>
+    <li><a href="#team-members">Team Members</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -69,15 +67,12 @@ This is a Team Project made in 5 days by 6 Team Members.we tried to clone the so
 
 Most of the HTML Page are static and most of the functionalities like Sign In/Sign UP and Checking for Local Sony Centres are dynamic . But in order to Use or Check functionalities Such as Opening the Product Section,Search and ADD/DELETE products(ADMIN ACCESS). You need to run JSON-Server on your Node JS Terminal. As we couldn't find a free API to get the Product data we had to make our own Data Base.
 
-<!-- This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps. -->
 
-### Prerequisites & Installation
+### Prerequisites and Installation
 
 Make sure you have Node JS on your machine .Use the following NPM Package to get started and access all the functionalities of the Project.
 
-<!--
-This is an example of how to list things you need to use the software and how to install them. -->
+
 
 - Install NPM packages
 
@@ -100,7 +95,7 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 
-## Usage & Features
+## Usage and Features
 
 Starting from the HomePage of the website.The Navbar has Dropdown Menus, so please checkout all the dropdown animations on the navbar.In the Body of the Home Page , you can find Image slider shows Trending Products . Create an account and Sign In.Checkout Electronic products and also use filter and sorting features in the product page, Search for products in the search bar.Check out NearBy Sony Centres in the Retail page,Get Admin Access to ADD,DELETE and GET Product Information.
 
