@@ -1,0 +1,79 @@
+body {
+  margin: 0px;
+  padding: 0%;
+}
+.container_tv {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  gap: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.container_tv p {
+  background-color: whitesmoke;
+}
+.container_tv > div {
+  margin-top: 20px;
+  padding: 10px;
+  overflow: scroll;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.navbar {
+  margin: 0px;
+  padding-top: 1px;
+  text-align: center;
+  background-color: black;
+  text-shadow: 1px 1px 2px black;
+  color: white;
+}
+.admin_category {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.admin_category button {
+  padding: 20px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.admin_category button:hover {
+  background-color: whitesmoke;
+}
+.container_headphone {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  gap: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.container_headphone > div {
+  margin-top: 20px;
+  padding: 10px;
+  overflow: scroll;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.container_MP3_Player {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+
+  gap: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.container_MP3_Player > div {
+  margin-top: 20px;
+  padding: 10px;
+  overflow: scroll;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

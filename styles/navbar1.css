@@ -1,4 +1,4 @@
-* {
+body {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
@@ -12,6 +12,7 @@
   background-color: black;
   color: white;
   border: 1px solid black;
+  height: 60px;
 }
 .nav_list {
   display: flex;
@@ -26,8 +27,8 @@
 .nav_list > li {
   list-style: none;
   padding: 0px 15px;
-  padding-top: 20px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   font-size: medium;
   border-bottom: 4px solid black;
   /* cursor: pointer; */

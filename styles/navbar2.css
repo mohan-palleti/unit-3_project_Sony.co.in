@@ -1,7 +1,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
 }
 .nav_sm {
   display: none;
@@ -58,17 +57,6 @@
 
   cursor: pointer;
 }
-.map_details {
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 45%);
-}
-.map_details > div {
-  display: flex;
-  gap: 20px;
-  line-height: 20px;
-}
 .right_nav li p {
   padding: 10px;
 }
@@ -99,8 +87,7 @@
 /* for dropdown */
 .dropdown_list {
   width: 1450%;
-  height: 0px;
-  overflow: hidden;
+  max-height: 700px;
   margin-top: 20px;
   position: absolute;
   background-color: white;
@@ -110,8 +97,8 @@
   opacity: 0;
   pointer-events: none;
 
-  /* transform: translateY(-100%); */
-  transition: height cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+  transform: translateY(-100%);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
   z-index: 100;
 }
 
@@ -121,12 +108,11 @@
 }
 #dropdown_button:hover .dropdown_list {
   opacity: 1;
-  height: 700px;
   pointer-events: visible;
   transform: translateY(0px);
 }
 /* 
-  for drop down menu list */
+for drop down menu list */
 .container_list {
   text-align: left;
   font-size: 13px;
@@ -183,15 +169,14 @@
 .signup_dropdown {
   opacity: 0;
   position: absolute;
-  width: 170px;
-  height: 0px;
+  width: 150px;
   left: 0;
+
   background-color: white;
   padding: 0.75rem;
   pointer-events: none;
-  overflow: hidden;
-  /* transform: translateY(-100%); */
-  transition: height cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+  transform: translateY(-100%);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   z-index: 100;
 }
 .signup_dropdown > button {
@@ -208,167 +193,10 @@
 .my_sony_drop:hover .signup_dropdown {
   opacity: 1;
   transform: translateY(0%);
-  height: 95px;
   pointer-events: visible;
   color: #5865f5;
   background-color: white;
 }
-
-/* 
-  search box drop down */
-
-/* .drop_down_search {
-  display: none;
-  position: absolute;
-  width: 20%;
-  color: black;
-  left: 1;
-  background-color: white;
-  padding: 0.75rem;
-  pointer-events: none;
-  transform: translateY(5%);
-  transform: translateX(-42%);
-  transition-duration: 0.5s;
-  z-index: 100;
-}
-#search_sony + div:hover {
-  background-color: snow;
-}
-#search_sony + div > input {
-  width: 100%;
-  height: 30px;
-}
-#search_sony + div > input:hover {
-  background-color: snow;
-}
-#search_results {
-  display: none;
-  position: absolute;
-  width: 20%;
-  height: 300px;
-  color: black;
-  left: 1;
-  background-color: white;
-  padding: 0.75rem;
-  pointer-events: none;
-  transform: translateY(5%);
-  transform: translateX(-42%);
-  top: 7rem;
-  transition-duration: 0.5s;
-  z-index: 100;
-} */
-
-/* 
-search box drop down */
-
-.drop_down_search {
-  display: none;
-  position: absolute;
-  /* margin-top: 60px; */
-  width: 20%;
-  color: black;
-  left: 1;
-  background-color: white;
-  padding: 0.75rem;
-  pointer-events: none;
-  transform: translateY(5%);
-  transform: translateX(-42%);
-  transition-duration: 0.5s;
-  z-index: 100;
-}
-#search_sony + div:hover {
-  background-color: snow;
-}
-#search_sony + div > input {
-  width: 100%;
-  height: 30px;
-}
-#search_sony + div > input:hover {
-  background-color: snow;
-}
-#search_results {
-  display: none;
-  position: absolute;
-  /* margin-top: 60px; */
-  width: 20%;
-  height: 530px;
-  color: black;
-  left: 1;
-  background-color: white;
-  padding: 0.75rem;
-  pointer-events: none;
-  transform: translateY(5%);
-  transform: translateX(-42%);
-  top: 7rem;
-  transition-duration: 0.5s;
-  z-index: 100;
-  overflow: hidden;
-}
-#box2 {
-  width: 280px !important;
-  height: 82px !important;
-  display: flex;
-  border: none !important;
-  margin-left: -6px !important;
-  /* border-radius: 10px; */
-  margin: auto;
-  margin-top: 7px;
-  cursor: pointer;
-  background-color: white;
-  /* margin-bottom:4px; */
-}
-#box2 :hover {
-  background-color: rgb(170, 170, 170);
-}
-#right_box {
-  width: 30%;
-  height: 82px;
-  text-align: end;
-  line-height: 20px;
-  padding-top: 20px;
-  background-color: white;
-}
-#right_box:hover{
-  background-color: white;
-}
-#right_box>h3:hover,#right_box>h4:hover{
-  background-color: white;
-  text-decoration: underline;
-}
-#left_box {
-  width: 90%;
-  height: 90px;
-}
-#divproduct {
-  width: 90%;
-  margin: auto;
-  margin-bottom: 5px;
-}
-#divproduct > h3{
-  background-color: white;
-}
-#divsee {
-  width: 90%;
-  margin: auto;
-  text-align: center !important;
-  margin-top: 20px;
-  margin-bottom: 22px;
-}
-#divsee:hover{
-  background-color: white;
-}
-#more{
-  height: 30px;
-  width: 150px;
-  background-color: rgb(53, 180, 230);
-  border: 0;
-  color: white;
-}
-#more:hover{
-  background-color: skyblue;
-  cursor: pointer;
-}
-
 
 /* top MENU START */
 

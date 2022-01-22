@@ -64,7 +64,7 @@ ol > li {
   align-items: center;
   padding: 5px;
 }
-button {
+#box1 > button {
   background-color: rgb(0, 132, 255);
   width: 120px;
   height: 30px;
@@ -72,7 +72,7 @@ button {
   border: none;
   /* margin-left: 70px; */
 }
-h4 {
+#footer h4 {
   margin-top: 0%;
   color: rgb(151, 151, 151);
   font-weight: lighter;
@@ -81,12 +81,17 @@ h4 {
   width: 90%;
   background-color: rgb(31, 32, 36);
   border: none;
+  color: white;
 }
 #box1 > input::placeholder {
   color: white;
 }
 
-a {
+#box1 > input:focus{
+  outline: none;
+}
+
+#foot a {
   text-decoration: none;
   color: white;
   padding-top: 10px;
