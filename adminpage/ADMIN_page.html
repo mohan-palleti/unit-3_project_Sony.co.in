@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/683b4b40e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0%;
+      }
+      .container_tv {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        gap: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .container_tv p {
+        background-color: whitesmoke;
+      }
+      .container_tv > div {
+        margin-top: 20px;
+        padding: 10px;
+        overflow: scroll;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+
+      .navbar {
+        margin: 0px;
+        padding-top: 1px;
+        text-align: center;
+        background-color: black;
+        text-shadow: 1px 1px 2px black;
+        color: white;
+      }
+      .admin_category {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+      .admin_category button {
+        padding: 20px;
+        cursor: pointer;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      .admin_category button:hover {
+        background-color: whitesmoke;
+      }
+      .container_headphone {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        gap: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .container_headphone > div {
+        margin-top: 20px;
+        padding: 10px;
+        overflow: scroll;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      .container_MP3_Player {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+
+        gap: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .container_MP3_Player > div {
+        margin-top: 20px;
+        padding: 10px;
+        overflow: scroll;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+    </style>
+  </head>
+  <body>
+    <!------------------ navbar start-------------------  -->
+    <div class="navbar">
+      <h2>
+        <a href="">
+          <img
+            src="https://1000logos.net/wp-content/uploads/2017/06/Symbol-Sony.jpg"
+            alt=""
+            style="width: 10%"
+          />
+        </a>
+        <br />
+        ADMIN Access
+      </h2>
+    </div>
+    <!-- ----------------------navbar ends ----------------->
+    <!-- --------------add buttons div------------- -->
+    <div class="admin_category">
+      <div class="tv_product">
+        <button onclick="displaymenu('TV')">
+          <b>Add / Update TV Products</b>
+        </button>
+      </div>
+      <div class="headphone_product">
+        <button onclick="displaymenu('headphone')">
+          <b>Add / Update headphone Products</b>
+        </button>
+      </div>
+      <div class="headphone_product">
+        <button onclick="displaymenu('mp3')">
+          <b>Add / Update MP3 Products</b>
+        </button>
+      </div>
+    </div>
+    <!-- --------------add buttons div ends------------- -->
+
+    <div class="appendmenu"></div>
+    <div class="container_tv">
+      <div>
+        <span>
+          <h1 style="background-color: whitesmoke">Add TV Model</h1>
+          <label for="product">TV type</label>
+          <br />
+          <br />
+          <label for="id"> ID</label>
+          <input type="text" name="" placeholder="id" id="id_tv" />
+          <br />
+          <br />
+          <label for="id"> model number</label>
+          <input
+            type="text"
+            name=""
+            placeholder="model number"
+            id="model_number"
+          />
+          <br />
+
+          <br />
+
+          <input type="checkbox" name="OLED" id="OLED" />
+          <label for="OLED"> OLED</label><br />
+
+          <input type="checkbox" name="Full_array_LED" id="Full_array_LED" />
+          <label for="Full_array_LED"> Full_array_LED</label><br />
+
+          <input type="checkbox" name="LED_display" id="LED_display" />
+          <label for="LED_display"> LED_display</label><br />
+          <input type="checkbox" name="Smart_tv" id="Smart_tv" />
+          <label for="Smart_tv"> Smart_tv</label><br />
+          <input type="checkbox" name="Google_tv" id="Google_tv" />
+          <label for="Google_tv"> Google_tv</label><br />
+          <input type="checkbox" name="HDMI_2.1" id="HDMI_2.1" />
+          <label for="HDMI_2.1"> HDMI_2.1</label><br />
+          <input type="checkbox" name="BRAVIA_XR" id="BRAVIA_XR" />
+          <label for="BRAVIA_XR"> BRAVIA_XR</label><br />
+          <input type="checkbox" name="MASTER_Series" id="MASTER_Series" />
+          <label for="MASTER_Series"> MASTER_Series</label><br />
+          <hr />
+          <p>Resolution</p>
+          <select name="resolution" id="resolution">
+            <option value="">---</option>
+            <option value="8KHDR">8K HDR</option>
+            <option value="4KHDR">4K HDR</option>
+            <option value="FULL_HDR">full HDR</option>
+          </select>
+          <!-- <input type="checkbox" name="8K_HDR" id="8K_HDR" />
+                <label for="8K_HDR"> 8K_HDR</label><br />
+                <input type="checkbox" name="4K_HDR" id="4K_HDR" />
+                <label for="4K_HDR"> 4K_HDR</label><br />
+                <input type="checkbox" name="Full_HD" id="Full_HD" />
+                <label for="Full_HD"> Full_HD</label><br /> -->
+          <hr />
+          <p>size</p>
+          <input type="checkbox" name="32" id="32" />
+          <label for="32"> 32</label><br />
+          <input type="checkbox" name="43" id="43" />
+          <label for="43"> 43</label><br />
+          <input type="checkbox" name="50" id="50" />
+          <label for="50"> 50</label><br />
+          <input type="checkbox" name="55" id="55" />
+          <label for="55"> 55</label><br />
+          <input type="checkbox" name="65" id="65" />
+          <label for="65"> 65</label><br />
+          <input type="checkbox" name="75" id="75" />
+          <label for="75"> 75</label><br />
+          <input type="checkbox" name="85" id="85" />
+          <label for="85"> 85</label><br />
+          <hr />
+          <p>Price</p>
+          <input type="number" name="" placeholder="price" id="price" />
+          <p>MODEL</p>
+          <input type="text" id="model" placeholder="Model" />
+          <p>Dealer</p>
+          <input type="text" name="" id="buy_link_tv" placeholder="buy_link" />
+          <p>Image link</p>
+          <input type="text" placeholder="image url" id="image_url" />
+          <br />
+          <p>description</p>
+          <textarea
+            name="description"
+            id="description"
+            cols="50"
+            rows="10"
+          ></textarea>
+          <button onclick="addProduct()">add item</button>
+        </span>
+      </div>
+
+      <div style="width: 60%">
+        <div>
+          <h1 style="background-color: whitesmoke">Delete TV Model</h1>
+          <input type="text" placeholder="id number" id="delete_id" />
+          <button onclick="deleteProduct()">delete</button>
+        </div>
+        <br />
+        <hr />
+        <h1 style="background-color: whitesmoke">GET TV Model Details</h1>
+
+        <button onclick="get_tv_items()">GET ITEMS</button>
+        <div id="append_tv_details"></div>
+      </div>
+    </div>
+
+    <!-- --------------headPhone Section start------------------- -->
+    <div class="container_headphone">
+      <div>
+        <span>
+          <h1>Add Head Phone</h1>
+          <!-- <label for="product">headphones type</label>
+            <br />
+            <br /> -->
+          <label for="id"> ID</label>
+          <input type="number" name="" placeholder="id" id="id_head" />
+          <br />
+
+          <br />
+
+          <input type="checkbox" name="EXTRA" id="EXTRA" />
+          <label for="EXTRA"> EXTRA</label><br />
+
+          <input type="checkbox" name="BASS" id="BASS" />
+          <label for="BASS"> BASS</label><br />
+
+          <input type="checkbox" name="WIRELESS" id="WIRELESS" />
+          <label for="WIRELESS"> WIRELESS</label><br />
+          <input type="checkbox" name="MDR-XB450" id="MDR-XB450" />
+          <label for="MDR-XB450">MDR-XB450</label><br />
+          <input type="checkbox" name="MDR-ZX110" id="MDR-ZX110" />
+          <label for="MDR-ZX110"> MDR-ZX110</label><br />
+          <input type="checkbox" name="WHCH-510" id="WHCH-510" />
+          <label for="WHCH-510"> WHCH-510</label><br />
+          <input type="checkbox" name="XB450BV" id="XB450BV" />
+          <label for="XB450BV">XB450BV</label><br />
+          <hr />
+          <p>Model</p>
+
+          <input
+            type="text"
+            name=""
+            id="resolution_head"
+            placeholder="Model number"
+          />
+
+          <hr />
+
+          <hr />
+
+          <p>Price</p>
+          <input type="number" name="" placeholder="price" id="price_head" />
+          <p>MODEL</p>
+          <input type="text" id="model_head" placeholder="Model NAME" />
+          <p>Dealer</p>
+          <input
+            type="text"
+            name=""
+            id="buy_link_head"
+            placeholder="buy_link"
+          />
+          <p>Image link</p>
+          <input type="text" placeholder="image url" id="image_url_head" />
+          <br />
+          <p>description_head</p>
+          <textarea
+            name="description_head"
+            id="description_head"
+            cols="50"
+            rows="10"
+          ></textarea>
+          <button onclick="addheadphone()">add item</button>
+        </span>
+      </div>
+
+      <div style="width: 60%">
+        <div>
+          <h1>delete Head Phone</h1>
+          <input type="text" placeholder="id number" id="delete_id_head" />
+          <button onclick="deletehead()">delete</button>
+        </div>
+        <br />
+        <hr />
+
+        <h1 style="background-color: whitesmoke">GET Head Phones Details</h1>
+
+        <button onclick="get_head_items()">GET ITEMS</button>
+        <div id="append_headphone"></div>
+      </div>
+    </div>
+    <!-- --------------headPhone Section end------------------- -->
+
+    <!-- -----------MP3 section- starts---------- -->
+
+    <div class="container_MP3_Player">
+      <div>
+        <span>
+          <h1>Add MP3players</h1>
+          <!-- <label for="product">headphones type</label>
+            <br />
+            <br /> -->
+          <label for="id"> ID</label>
+          <input type="text" name="" placeholder="id" id="id_mp3" />
+          <br />
+          <!-- 
+  
+          <hr />
+          
+            <label for="75"> 75</label><br />
+            <input type="checkbox" name="85" id="85" />
+            <label for="85"> 85</label><br />
+            <hr /> -->
+          <p>Price</p>
+          <input type="number" name="" placeholder="price" id="price_mp3" />
+          <p>MODEL</p>
+          <input type="text" id="model_mp3" placeholder="Model" />
+          <p>Dealer</p>
+          <input type="text" name="" id="buy_link_mp3" placeholder="buy_link" />
+          <p>Image link</p>
+          <input type="text" placeholder="image url" id="image_url_mp3" />
+          <br />
+          <p>description_head</p>
+          <textarea
+            name="description_head"
+            id="description_mp3"
+            cols="50"
+            rows="10"
+          ></textarea>
+          <button onclick="addmp3()">add item</button>
+        </span>
+      </div>
+
+      <div style="width: 60%">
+        <div>
+          <h1>delete MP3 Player</h1>
+          <input type="text" placeholder="id number" id="delete_id_mp3" />
+          <button onclick="deleteMp3()">delete</button>
+        </div>
+        <br />
+        <hr />
+
+        <h1 style="background-color: whitesmoke">GET MP3 Player Details</h1>
+
+        <button onclick="get_mp3_items()">GET ITEMS</button>
+        <div id="append_MP3"></div>
+      </div>
+    </div>
+    <!-- -----------MP3 section ends----------- -->
+  </body>
+</html>
+<script>
+  //to Add TV Items
+  async function addProduct() {
+    try {
+      let data = {
+        tv_type: {
+          id: document.getElementById("model_number").value,
+          OLED: document.getElementById("OLED").checked,
+          Full_Array_LED: document.getElementById("Full_array_LED").checked,
+          LED_Display: document.getElementById("LED_display").checked,
+          Smart_tv: document.getElementById("Smart_tv").checked,
+          Google_tv: document.getElementById("Google_tv").checked,
+          HDMI: document.getElementById("HDMI_2.1").checked,
+          BRAVIA_XR: document.getElementById("BRAVIA_XR").checked,
+          MASTER_Series: document.getElementById("MASTER_Series").checked,
+        },
+        resolution: document.getElementById("resolution").value,
+        size: {
+          32: document.getElementById("32").checked,
+          43: document.getElementById("43").checked,
+          50: document.getElementById("50").checked,
+
+          55: document.getElementById("55").checked,
+          65: document.getElementById("65").checked,
+          75: document.getElementById("75").checked,
+          85: document.getElementById("85").checked,
+        },
+        price: document.getElementById("price").value,
+        model: document.getElementById("model").value,
+        Image: document.getElementById("image_url").value,
+        description: document.getElementById("description").value,
+        id: document.getElementById("id_tv").value,
+        buy: document.getElementById("buy_link_tv").value,
+      };
+      data = JSON.stringify(data);
+      let response = await fetch("http://127.0.0.1:5000/api/products", {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let d = await response.json();
+      console.log("data:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  //Delete TV Items
+  async function deleteProduct() {
+    try {
+      let id = document.getElementById("delete_id").value;
+
+      let response = await fetch(`http://127.0.0.1:5000/api/products/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("d:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  //To get_ TV items
+  async function get_tv_items() {
+    try {
+      let response = await fetch(`http://127.0.0.1:5000/api/products`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("get:", d);
+      append_TV(d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  function append_TV(d) {
+    d.forEach((element) => {
+      let div = document.createElement("div");
+      let model = document.createElement("h3");
+      let resolution = document.createElement("p");
+      let price = document.createElement("p");
+
+      let type = document.createElement("p");
+      let size = document.createElement("p");
+      let b = "",
+        g = "";
+      for (let x in element.tv_type) {
+        if (element.tv_type[x] === true) {
+          b += x + " ";
+        }
+      }
+      type.innerHTML = `Type: ${b}`;
+      model.innerHTML = `Model: ${element.model}`;
+      resolution.innerHTML = element.resolution;
+      price.innerHTML = `Price:${element.price}`;
+      for (let x in element.size) {
+        if (element.size[x]) {
+          g += x + " ";
+        }
+      }
+      size.innerHTML = `Available Sizes ${g}`;
+      div.append(model, resolution, price, type, size);
+      document.getElementById("append_tv_details").append(div);
+    });
+  }
+  //--------------------API calls for MP3 players------------------------------------------------------------------------------------------------
+  //to Add Items
+  async function addmp3() {
+    try {
+      let data = {
+        id: document.getElementById("id_mp3").value,
+
+        resolution: document.getElementById("resolution_mp3").value,
+
+        head_price: document.getElementById("price_mp3").value,
+        headphone_model: document.getElementById("model_mp3").value,
+
+        Image: document.getElementById("image_url_mp3").value,
+        description_head: document.getElementById("description_mp3").value,
+        buy: document.getElementById("buy_link_mp3").value,
+      };
+      data = JSON.stringify(data);
+      let response = await fetch("http://127.0.0.1:5000/api/mp3players", {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let d = await response.json();
+      console.log("data:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  //Delete Items
+  async function deleteMp3() {
+    try {
+      let id = document.getElementById("delete_id_mp3").value;
+
+      let response = await fetch(`http://127.0.0.1:5000/api/mp3players/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("d:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  // get Mp3 players details
+  async function get_mp3_items() {
+    try {
+      let response = await fetch(`http://127.0.0.1:5000/api/mp3players`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("get:", d);
+      append_MP3(d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  function append_MP3(d) {
+    d.forEach((element) => {
+      let div = document.createElement("div");
+      let name = document.createElement("h3");
+      let resolution = document.createElement("p");
+      let price = document.createElement("p");
+      name.innerHTML = `Name: ${element.name}`;
+      resolution.innerHTML = `Model:${element.model}`;
+      price.innerHTML = `Price:${element.price}`;
+
+      div.append(name, resolution, price);
+      document.getElementById("append_MP3").append(div);
+    });
+  }
+
+  //------------------- headphone api calls-------------------------------------------------------------------------------------
+
+  //to ADD head phones
+  async function addheadphone() {
+    try {
+      let data = {
+        headphones_type: {
+          EXTRA: document.getElementById("EXTRA").checked,
+          BASS: document.getElementById("BASS").checked,
+          WIRELESS: document.getElementById("WIRELESS").checked,
+          MDR_XB450: document.getElementById("MDR-XB450").checked,
+          MDR_ZX110: document.getElementById("MDR-ZX110").checked,
+          WHCH_510: document.getElementById("WHCH-510").checked,
+          XB450BV: document.getElementById("XB450BV").checked,
+        },
+        resolution: document.getElementById("resolution_head").value,
+
+        price: document.getElementById("price_head").value,
+        model: document.getElementById("model_head").value,
+
+        Image: document.getElementById("image_url_head").value,
+        description: document.getElementById("description_head").value,
+        id: document.getElementById("id_head").value,
+        buy: document.getElementById("buy_link_head").value,
+      };
+      data = JSON.stringify(data);
+      let response = await fetch("http://127.0.0.1:5000/api/headphones", {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let d = await response.json();
+      console.log("data:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  //Delete Items
+  async function deletehead() {
+    try {
+      let id = document.getElementById("delete_id_head").value;
+
+      let response = await fetch(`http://127.0.0.1:5000/api/headphones/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("d:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  // get Mp3 players details
+  async function get_head_items() {
+    try {
+      let response = await fetch(`http://127.0.0.1:5000/api/headphones`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("get:", d);
+      append_headphone(d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  function append_headphone(d) {
+    d.forEach((element) => {
+      let div = document.createElement("div");
+      let name = document.createElement("h3");
+      let resolution = document.createElement("p");
+      let price = document.createElement("p");
+      name.innerHTML = `Name: ${element.model}`;
+      resolution.innerHTML = `Model:${element.resolution}`;
+      price.innerHTML = `Price:${element.price}`;
+
+      div.append(name, resolution, price);
+      document.getElementById("append_headphone").append(div);
+    });
+  }
+
+  // --------------------------------------------------function for UI (BUTTONS)-----------------------------------------------------------------------------
+  function displaymenu(category) {
+    let tvcategory = document.querySelector(".container_tv");
+    let headcategory = document.querySelector(".container_headphone");
+    let mp3 = document.querySelector(".container_MP3_Player");
+    if (category === "TV") {
+      console.log("tv");
+      tvcategory.style.opacity = "1";
+      tvcategory.style.pointerEvents = "visible";
+      tvcategory.style.height = "700px";
+
+      headcategory.style.opacity = "0";
+      headcategory.style.pointerEvents = "none";
+      headcategory.style.height = "0px";
+
+      mp3.style.opacity = "0";
+      mp3.style.pointerEvents = "none";
+      mp3.style.height = "0px";
+    }
+    if (category === "headphone") {
+      console.log("headphone");
+      tvcategory.style.opacity = "0";
+      tvcategory.style.pointerEvents = "none";
+      tvcategory.style.height = "0px";
+
+      headcategory.style.opacity = "1";
+      headcategory.style.pointerEvents = "visible";
+      headcategory.style.height = "700px";
+
+      mp3.style.opacity = "0";
+      mp3.style.pointerEvents = "none";
+      mp3.style.height = "0px";
+    }
+    if (category === "mp3") {
+      console.log("mp3");
+      mp3.style.opacity = "1";
+      mp3.style.pointerEvents = "visible";
+      mp3.style.height = "700px";
+
+      tvcategory.style.opacity = "0";
+      tvcategory.style.pointerEvents = "none";
+      tvcategory.style.height = "0px";
+
+      headcategory.style.opacity = "0";
+      headcategory.style.pointerEvents = "none";
+      headcategory.style.height = "0px";
+    }
+  }
+</script>
