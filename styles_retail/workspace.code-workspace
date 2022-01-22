@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "unit-3_project_Sony.co.in",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5503,
+		"liveServer.settings.multiRootWorkspaceName": "unit-3_project_Sony.co.in"
+	}
+}
