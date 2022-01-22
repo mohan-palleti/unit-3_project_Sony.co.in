@@ -19,9 +19,9 @@ body {
   justify-content: center;
 }
 #logo_sony {
-  height: 35px;
+  height: 30px;
   margin-top: 15px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .nav_list > li {
   list-style: none;
