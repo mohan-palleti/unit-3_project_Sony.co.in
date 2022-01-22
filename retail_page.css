@@ -262,7 +262,7 @@ span:nth-child(2):hover {
   padding-left: 2px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 780px) {
   #details {
     /* border: 2px solid red; */
     display: grid;
@@ -282,7 +282,7 @@ span:nth-child(2):hover {
   margin: auto;
   padding-top: 100px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
 #box1 {
@@ -695,7 +695,14 @@ button:hover {
   width: 300px;
   justify-content: space-evenly;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 913px) {
+  #dealer2 > div:nth-child(2) {
+   
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
   #authdealer1 {
     /* border: 2px solid red; */
     display: grid;
