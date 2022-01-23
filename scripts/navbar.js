@@ -1,7 +1,7 @@
 
 // navbar sign in & log out code
-var user = JSON.parse(localStorage.getItem("register"));
-var system = JSON.parse(localStorage.getItem("system"));
+var user = JSON.parse(localStorage.getItem("register")) || "";
+var system = JSON.parse(localStorage.getItem("system")) || "";
 let loggedin = document.querySelector(".my_sony_drop>p");
 let signbtn = document.querySelector(".signup_dropdown>button");
 
