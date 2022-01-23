@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mohan-palleti/unit-3_project_Sony.co.in">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS937Tv1OFYWc5fdFOmkvvZrbrG3AvpgzYgtHA8P_HFELwZRBpVhP0Wn0ANvu79WKtFuRk&usqp=CAU" alt="Logo" width="120" height="80">
+    <img src="https://1000logos.net/wp-content/uploads/2017/06/Symbol-Sony.jpg" alt="Logo" width="120" height="80">
   </a>
 
 <h3 align="center">Sony Website(Clone)</h3>
@@ -73,13 +73,12 @@ Most of the HTML Page are static and most of the functionalities like Sign In/Si
 Make sure you have Node JS on your machine .Use the following NPM Package to get started and access all the functionalities of the Project.
 
 
+- Goto api folder
 
 - Install NPM packages
 
   ```sh
   npm init
-
-  npm mock-api-app
 
   npm i json-server
   ```
