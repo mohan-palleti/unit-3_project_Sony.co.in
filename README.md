@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mohan-palleti/unit-3_project_Sony.co.in">
-    <img src="https://1000logos.net/wp-content/uploads/2017/06/Symbol-Sony.jpg" alt="Logo" width="120" height="80">
+    <img src="https://1000logos.net/wp-content/uploads/2017/06/Symbol-Sony.jpg" alt="Logo" width="120" height="60">
   </a>
 
 <h3 align="center">Sony Website(Clone)</h3>
@@ -47,7 +47,7 @@
 
 This is a Team Project made in 5 days by 6 Team Members.we tried to clone the sony.co.in website.With all the Concepts we learned in Masai School till Unit-3.Checkout the preview of our Sony Website Clone and find the Source Code in the Main Branch.
 
-  <img src="https://miro.medium.com/max/2000/1*juKMHmypbRzEPcxavV2KfA.jpeg" alt="Logo" width="800" >
+  <img src="https://miro.medium.com/max/2000/1*juKMHmypbRzEPcxavV2KfA.jpeg" alt="Logo" width="1000" >
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
