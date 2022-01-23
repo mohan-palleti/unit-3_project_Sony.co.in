@@ -96,7 +96,7 @@ Make sure you have Node JS on your machine .Use the following NPM Package to get
 
 ## Usage and Features
 
-Starting from the HomePage of the website.The Navbar has Dropdown Menus, so please checkout all the dropdown animations on the navbar.In the Body of the Home Page , you can find Image slider shows Trending Products . Create an account and Sign In.Checkout Electronic products and also use filter and sorting features in the product page, Search for products in the search bar.Check out NearBy Sony Centres in the Retail page,Get Admin Access to ADD,DELETE and GET Product Information.
+Starting from the HomePage(index.html) of the website.The Navbar has Dropdown Menus, so please checkout all the dropdown animations on the navbar.In the Body of the Home Page , you can find Image slider shows Trending Products . Create an account and Sign In.Checkout Electronic products and also use filter and sorting features in the product page, Search for products in the search bar.(type your pincode and click on search button in the footer of index.html)Check out NearBy Sony Centres in the Retail page,Get Admin Access to ADD,DELETE and GET Product Information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
