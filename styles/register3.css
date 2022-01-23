@@ -1,0 +1,44 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+#container > h3 {
+  background-color: grey;
+  height: 90px;
+  background-color: #e7ebef;
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2f353d;
+  font-style: normal;
+  line-height: 29px;
+}
+.custom {
+  padding-left: 25px;
+}
+.custom > div{
+  margin: 20px 0px;
+}
+.reg a {
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #5887f5;
+}
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  body {
+    position: relative;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 375px) {
+  body {
+    position: relative;
+  }
+}

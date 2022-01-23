@@ -1,0 +1,296 @@
+body {
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+#getdata {
+  margin: 0px 150px;
+  margin-top: 50px;
+  display: grid;
+  /* grid-template-rows: repeat(3, 1050px); */
+  grid-template-columns: repeat(3, 385px);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+#main {
+  /* margin-top: 50px; */
+  border: 0.2px solid rgba(68, 68, 68, 0.24);
+  height: 900px;
+  /* width: 450px; */
+  /* font-family: "Poppins", sans-serif; */
+}
+#imgDiv {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 20px;
+}
+#img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 30px 0px;
+}
+#div1 {
+  line-height: 25px;
+  font-size: 20px;
+  font: bolder;
+  font-weight: 700;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 20px;
+}
+#div2 {
+  width: 90%;
+  margin: auto;
+  height: 260px;
+  line-height: 30px;
+  text-align: start;
+  margin-top: 50px;
+}
+#div3 {
+  width: 90%;
+  margin: auto;
+}
+#div4 {
+  width: 90%;
+  height: 30px;
+  margin: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.719);
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.size{
+  padding-left: 5px;
+}
+#div5 {
+  width: 90%;
+  height: 17px;
+  margin: auto;
+}
+#div6 {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+#div7 {
+  width: 90%;
+  margin: auto;
+  height: 70px;
+  padding-top: 50px;
+}
+#div7>button {
+  width: 80%;
+  height: 35px;
+  border-radius: 3px;
+  margin-left: 35px;
+  color: white;
+  background-color: orangered;
+  border: 1px white;
+  cursor: pointer;
+  text-align: center;
+}
+#div7>button:hover{
+  background-color: rgb(226, 63, 3);
+  transition: 0.5s;
+}
+#div8 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+#div8 select {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  background-color: #516b86;
+}
+.television {
+  height: 300px;
+  background-color: rgb(80, 108, 135);
+  display: flex;
+}
+.left {
+  color: white;
+  font-size: 20px;
+  width: 50%;
+  margin-right: 30px;
+}
+.left > p {
+  margin-top: 120px;
+  margin-left: 150px;
+  font-size: 11px;
+  font-weight: bold;
+}
+.left > h2 {
+  margin-left: 150px;
+  font-weight: normal;
+  font-size: 35px;
+}
+.right {
+  width: 50%;
+  height: 100%;
+}
+.telDiv {
+  border: 2px solid white;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+}
+.telDiv > img {
+  margin-top: 20px;
+}
+.telDiv > p {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+#filterDiv {
+  height: 110px;
+  background-color: rgb(228, 231, 235);
+  display: flex;
+}
+#filterDiv > div:nth-child(1) {
+  margin-left: 150px;
+}
+#cfDiv{
+  height: 100px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+#cfDiv>div{
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.plength{
+  
+}
+.filterBtn{
+  margin-left: 2.5em;
+  position: relative;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: left;
+  min-width: 131px;
+  height: 45px;
+  background-color: orangered;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+}
+.filterBtn:hover{
+  background-color: rgb(214, 62, 7);
+  transition: 0.5s;
+}
+.filterBtn:focus{
+  background-color: #2f353d;
+}
+.sortBtn{
+  margin-left: 2.5em;
+  position: relative;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-align: left;
+  min-width: 131px;
+  height: 35px;
+  cursor: pointer;
+}
+.sortBtn:focus{
+  background-color: #596677;
+  color: white;
+  transition: 0.5s;
+}
+#fDiv{
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgb(228,231,235);
+  /* height: 300px; */
+  display: flex;
+  font-size: 13px;
+  transition: 0.5s ease-out;
+  height: 0px;
+}
+#fDiv>div{
+  margin-top: 15px;
+}
+#fDiv>div>p{
+  line-height: 50px;
+  font-weight: bold;
+}
+#fScreenDiv{
+  margin-left: 150px; 
+  margin-right: 130px;
+}
+#fScreenDiv>button{
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+  font-size: 13px;
+  border: 0;
+  background-color: rgb(253, 254, 255);
+  cursor: pointer;
+}
+#fTypeDiv{
+  margin-right: 110px;
+}
+#fPriceDiv{
+  margin-right: 100px;
+}
+#fPriceDiv>div{
+  display: grid;
+  grid-template-rows: repeat(2,50px);
+  grid-template-columns: repeat(2,170px);
+  gap: 20px;
+}
+#fPriceDiv>div>button{
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  background-color: white;
+  border: 0px;
+  cursor: pointer;
+}
+#fDiv>div>label{
+  line-height: 35px;
+  padding-left: 5px;
+}
+#fDiv>div>input{
+  height: 20px;
+  width: 20px;
+  border: 1px solid transparent;
+  background-color: rgb(253, 254, 255);
+}
+
+@media only screen and (min-width: 0px) and (max-width: 376px) {
+  .left>p, .left>h2{
+    margin-left: 40px;
+  }
+
+  #filterDiv > div:nth-child(1){
+    margin-left: 0px;
+  }
+
+  #fDiv{
+    display: block;
+    overflow: scroll;
+  }
+
+  #getdata{
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: 350px;
+  }
+
+}
+
+
+
+

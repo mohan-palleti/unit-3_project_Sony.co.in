@@ -1,0 +1,159 @@
+body {
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+#getdata {
+  margin: 0px 150px;
+  margin-top: 50px;
+  display: grid;
+  /* grid-template-rows: repeat(3, 1050px); */
+  grid-template-columns: repeat(3, 385px);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+#main {
+  /* margin-top: 50px; */
+  border: 0.2px solid rgba(68, 68, 68, 0.24);
+  height: 850px;
+  /* width: 450px; */
+  /* font-family: "Poppins", sans-serif; */
+}
+#imgDiv {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 20px;
+  background-color: rgb(241,245,249);
+  display: flex;
+  justify-content: center;
+}
+#img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 30px 0px;
+}
+#div1 {
+  width: 85%;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#div2 {
+  width: 85%;
+  margin: auto;
+  font-size: 18px;
+}
+#div3 {
+  width: 85%;
+  height: 200px;
+  font-size: 14px;
+  margin: auto;
+  margin-top: 20px;
+  line-height: 30px;
+}
+#div4 {
+  width: 85%;
+  margin: auto;
+  margin-top: 30px;
+  line-height: 20px;
+  text-align: right;
+}
+#div5 {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+#button {
+  width: 90%;
+  height: 40px;
+  color: white;
+  background-color: orangered;
+  cursor: pointer;
+  border: 0;
+}
+#button:hover{
+  background-color: rgb(226, 63, 3);
+  transition: 0.5s;
+}
+.television {
+  height: 300px;
+  background-color: rgb(236,172,61);
+  display: flex;
+}
+.left {
+  color: white;
+  font-size: 20px;
+  width: 40%;
+  margin-right: 150px;
+}
+.left > p {
+  margin-top: 120px;
+  margin-left: 150px;
+  font-size: 11px;
+  font-weight: bold;
+}
+.left > h2 {
+  margin-left: 150px;
+  font-weight: normal;
+  font-size: 35px;
+}
+.right {
+  width: 50%;
+  height: 100%;
+}
+.telDiv {
+  border: 2px solid white;
+  width: 120px;
+  text-align: center;
+}
+.telDiv > img {
+  margin-top: 20px;
+}
+.telDiv > p {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+#sortdiv {
+  width: 98%;
+  margin-left: 1230px;
+  line-height: 30px;
+  margin-top: 20px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+#sort {
+  font-size: 15px;
+  padding: 8px;
+}
+#sort:hover {
+  color: white;
+  background-color: #72727f;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 376px) {
+  .left>p, .left>h2{
+    margin-left: 40px;
+  }
+
+  #filterDiv > div:nth-child(1){
+    margin-left: 0px;
+  }
+
+  #fDiv{
+    display: block;
+    overflow: scroll;
+  }
+
+  #getdata{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 350px;
+  }
+
+  #sortdiv{
+    margin-left: 150px;
+  }
+}
