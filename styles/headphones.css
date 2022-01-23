@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,500&display=swap');
+#getdata{
+    display:grid;
+    grid-template-columns: repeat(3,31%);
+    gap:50px;
+}
+#main{
+    margin-top: 50px;
+    border:0.2px solid rgba(68, 68, 68, 0.24);
+    height:1000px;
+    font-family: 'Poppins', sans-serif;
+}
+#img{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#div1{
+    width:85%;
+    margin:auto;
+    margin-top:30px;
+    
+}
+#div2{
+    width:85%;
+    margin:auto;
+    
+}
+#div3{
+    width:85%;
+    margin:auto;
+    margin-top:40px;
+    line-height:30px;
+}
+#div4{
+    width:85%;
+    margin:auto;
+    margin-top:100px;
+    line-height: 10px;
+    text-align: right;
+}
+#div5{
+    width:85%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+#button{
+    width:90%;
+    height:40px;
+    color:white;
+    background-color: orangered;
+    
+}
+
+.television{
+    width:100%;
+    height:250px;
+    background-color:#506c87 ;
+    display: flex;
+}
+.left{
+    color:white;
+    line-height: 1px;
+    padding:50px 70px;
+    font-size: 20px;
+    width:50%;
+
+}
+#p{
+    font-size: 13px;
+}
+.right{
+    width:50%;
+    height:100%;
+
+}
+#sortdiv{
+    width:98%;
+    text-align: end;
+    line-height: 10px;
+    
+}
+#sort{
+    font-size: 15px;
+    font-weight: bolder;
+    padding:8px ;
+}
+#sort:hover{
+    color:white;
+    background-color:#72727f ;
+}
+
+

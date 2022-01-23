@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tv.html</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="/response.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,500&display=swap');
+        
+
+    
+        #getdata{
+            display:grid;
+            grid-template-columns: repeat(3, 31%);
+            gap:50px;
+           
+            
+        }
+        #main{
+            margin-top: 50px;
+            border:0.2px solid rgba(68, 68, 68, 0.24);
+            height:1300px;
+            font-family: 'Poppins', sans-serif;
+         
+        }
+        #img{
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        
+        }
+        #div1{
+            line-height: 25px;
+            font-size: 20px;
+            font:bolder;
+            font-weight: 700;
+            width: 90%;
+            margin: auto;
+            height:100px;
+            margin-top: 50px;
+        }
+        #div2{
+            width:90%;
+            margin: auto;
+            height:300px;
+            line-height: 30px;
+            text-align:start;
+            margin-top: 100px;
+
+        }
+        #div3{
+            width:90%;
+            margin:auto
+            
+        }
+        #div4{
+            width:90%;
+            margin:auto;
+            color:white;
+            background-color: rgba(0, 0, 0, 0.719);
+            padding-left: 10px;
+            display:flex;
+            
+
+        }
+        #div5{
+            width:90%;
+            height:15px;
+            margin:auto;
+        }
+        #div6{
+            width:90%;
+            margin:auto;
+            text-align:right;
+            margin-bottom: 50px;
+        }
+        #div7{
+            width:90%;
+            margin: auto;
+            height:70px;
+            padding-top: 50px;
+        }
+        #div7 button{
+            width: 80%;
+            height:35px;
+            border-radius: 3px;
+            margin-left: 35px;
+            color: white;
+            background-color: orangered;
+            border: 1px white;
+            cursor: pointer;
+            text-align: center;
+
+        }
+        #div8{
+            width:90%;
+            margin:auto;
+            text-align: center;
+        }
+        #div8 select{
+            width:100px;
+            height:30px;
+            text-align: center;
+            cursor: pointer;
+            color:white;
+            background-color: #516b86;
+        }
+        .television{
+            width:100%;
+            height:250px;
+            background-color:#506c87 ;
+            display: flex;
+        }
+        .left{
+            color:white;
+            line-height: 1px;
+            padding:50px 70px;
+            font-size: 20px;
+            width:50%;
+
+        }
+        #p{
+            font-size: 13px;
+        }
+        .right{
+            width:50%;
+            height:100%;
+
+        }
+        
+       
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <nav class="nav_sm">
+            <a href=""
+              ><img
+                src="https://1000logos.net/wp-content/uploads/2017/06/Symbol-Sony.jpg"
+                alt="logo"
+                id="logo_sony"
+                style="max-width: 100%; padding: 0px"
+            /></a>
+      
+            <div class="burger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </nav>
+      
+          <nav class="navbar navbar_sm">
+            <ul class="nav_list v_class_nav">
+              <a href=""
+                ><img
+                  src="https://1000logos.net/wp-content/uploads/2017/06/Symbol-Sony.jpg"
+                  alt="logo"
+                  id="logo_sony"
+                  style="max-width: 100%; padding: 0px"
+              /></a>
+              <li id="dropdown_button">
+                <a href="">Electronics</a>
+                <div class="dropdown_list">
+                  <div class="container_list">
+                    <div class="list_box1">
+                      <div>
+                        <ul>
+                          <span>Televisions & Home Cinema </span>
+                          <li>Televisions</li>
+                          <li>Home Theatre & Soundbars</li>
+                          <li>Blu-ray Disc <sup>TM</sup> DVD Players</li>
+                          <br />
+                          <a href="#">View All</a>
+                        </ul>
+                      </div>
+      
+                      <div>
+                        <ul>
+                          <span>Audio </span>
+                          <li>HeadPhones</li>
+                          <li>MP3 Players</li>
+                          <li>High Resolution audio</li>
+                          <li>Wireless speakers</li>
+                          <a href="#">View All</a>
+                        </ul>
+                      </div>
+      
+                      <div>
+                        <ul>
+                          <span>Cameras </span>
+                          <li>Interchangeable Lens Cameras</li>
+                          <li>Lenses</li>
+                          <li>Compact Cameras</li>
+                          <li>Cinema Line Cameras</li>
+                          <a href="#">View All</a>
+                        </ul>
+                      </div>
+      
+                      <div>
+                        <ul>
+                          <span>Video Cameras </span>
+                          <li>Camcoders</li>
+                          <li>Action Cameras</li>
+                          <li>Professional Video Cameras</li>
+                          <li>Cinema Line Cameras</li>
+                          <a href="#">View All</a>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="list_box1">
+                      <div>
+                        <ul>
+                          <span>Car Audio </span>
+                          <li>Mobile ES <sup>TM</sup> Series</li>
+                          <li>Receivers and Players</li>
+                          <li>Amplifiers</li>
+                          <li>Speakers And Subwoofers</li>
+                          <a href="#">View All</a>
+                        </ul>
+                      </div>
+      
+                      <div>
+                        <ul>
+                          <span>Storage & Cables </span>
+                          <li>Memory Cards & SSD</li>
+                          <li>Cables</li>
+                          <br />
+                          <br />
+                          <a href="#">View All</a>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="all_product_btn">
+                      <button><i class="fas fa-th"></i> All Electronics</button>
+                      <button>See Professional and Solutions</button>
+                    </div>
+                    <div class="map_details"></div>
+                  </div>
+                </div>
+              </li>
+              <li><a href="">Play Station </a></li>
+              <li><a href="">Support</a></li>
+            </ul>
+            <ul class="right_nav v_class_nav">
+              <li class="my_sony_drop">
+                <p>My Sony</p>
+                <div class="signup_dropdown">
+                  <button>Sign in</button>
+                  <p>NewsLetter</p>
+                  <p>Community</p>
+                </div>
+              </li>
+              <li><i class="fas fa-heart"></i></li>
+              <li><p id="search_sony">Search Sony</p>
+              </li>
+              <li>
+                <p class="sony_sites">Sony Sites <i class="fa fa-caret-down"></i></p>
+              </li>
+            </ul>
+          </nav>
+    </div>
+
+    <div class="television">
+        <div class="left">
+            <p id="p">TELEVISION & HOME CINEMA</p>
+            <H2>Television</H2>
+        </div>
+        <div class="right">
+            <img width="50%" height="200px" src="tvimg.png" >
+        </div>
+    </div>
+    <div id="getdata"></div>
+    
+</body>
+<script src="response.js"></script>
+</html>
+<script>
+    get();
+
+    async function get()
+    {
+        try{
+            let responce = await fetch(`http://127.0.0.1:5000/api/products`,{
+                method:"GET",
+                headers:{
+                    "Content-Type":"application/json",
+                },
+            });
+            let data = await responce.json();
+            console.log(data);
+            appendproduct(data);
+        }
+        catch(err)
+        {
+            console.log(err);
+        }
+    }
+
+    function appendproduct(data)
+    {
+        data.forEach((ele)=>{
+
+            let main = document.createElement("div");
+            main.setAttribute("id","main");
+            let img = document.createElement("img");
+            img.setAttribute("id","img")
+            img.style.height="300px";
+            img.style.width="100%";
+            img.src=ele.Image;
+            let div1 = document.createElement("div");
+            div1.setAttribute("id","div1")
+            for(var x in ele.tv_type)
+            {
+                if(ele.tv_type[x]==true)
+                {
+                    div1.append(x+" | ");
+                }
+            }
+           
+
+            
+            let div2 = document.createElement("div");
+            div2.setAttribute("id","div2");
+            let desc = document.createElement("h4");
+            desc.innerHTML="DESCRIPTION  :"+ele.description;
+            div2.append(desc);
+            let div3 = document.createElement("div");
+            div3.setAttribute("id","div3");
+            let resolution = document.createElement("h4");
+            resolution.innerHTML="RESOLUTION  :"+ele.resolution;
+            div3.append(resolution)
+            let div4 = document.createElement("div");
+            div4.setAttribute("id","div4");
+            let sizetext = document.createElement("h4");
+            sizetext.innerText="SIZE    :  ";
+            let size = document.createElement("h4");
+            for(var x in ele.size)
+            {
+                if(ele.size[x]==true)
+                {
+                    size.append(x+"ch ,");
+                }
+            }
+            div4.append(sizetext,size);
+            let div5= document.createElement("div");
+            div5.setAttribute("id","div5");
+            let model=document.createElement("h4");
+            model.innerHTML="MODEL NO  :"+ele.model;
+            div5.append(model);
+            let div6 = document.createElement("div");
+            div6.setAttribute("id","div6");
+            let inclu = document.createElement("p");
+            inclu.innerText="(incl. of all taxes)"
+            let price = document.createElement("h4");
+            price.innerHTML="MRP RS. "+ele.price+"/- Only";
+            div6.append(price,inclu);
+            let div7 = document.createElement("div");
+            div7.setAttribute("id","div7");
+            let button=document.createElement("button");
+            button.innerText="BUY";
+            div7.append(button);
+            let div8 = document.createElement("div");
+            div8.setAttribute("id","div8")
+            let sizeop = document.createElement("select");
+            let option1 = document.createElement("option");
+            
+            let option2 = document.createElement("option");
+            
+            let option3 = document.createElement("option");
+            
+            let option4 = document.createElement("option");
+            
+            var arr=[option1,option2,option3,option4];
+            let op = 0;
+            for (var x in ele.size)
+            {
+                
+                if(ele.size[x]==true)
+                {
+                   arr[op].append(x+"ch");
+                   op++;
+
+                }
+              
+                
+            }
+
+
+            sizeop.append(option1,option2,option3,option4);
+           
+            div8.append(sizeop);
+
+
+
+
+
+
+            main.append(img,div5,div3,div1,div4,div2,div6,div8,div7);
+
+            let getdata = document.getElementById("getdata");
+            getdata.append(main)
+
+
+
+
+
+
+        })
+       
+
+      
+    }
+</script>

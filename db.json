@@ -1,0 +1,845 @@
+{
+  "mp3players": [
+    {
+      "id": "1",
+      "resolution": "NW-A100 SERIES",
+      "price": "25990",
+      "model": "A100 Walkman® A Series",
+      "Image": "https://www.sony.co.in/image/bebdacffc4cb51f38e8d7…t=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "High-Resolution Audio compatible\nDigital Noise Cancelling and Ambient Sound mode12\nSupported by Android™, Wi-Fi compatible"
+    },
+    {
+      "id": "2",
+      "resolution": "NW-A50 SERIES",
+      "price": "14900",
+      "model": "A50 Walkman® A Series",
+      "Image": "https://www.sony.co.in/image/6b665bb2962a8ed20ba5c…t=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "High-Resolution Audio compatible\nBLUETOOTH® Receiver function 　\nDigital Noise Cancelling and ambient sound mode4\nAvailable with 16 GB, 64 GB, 16 GB with headphone, 32 GB with headphone on-board storage5"
+    },
+    {
+      "id": "3",
+      "resolution": "NW-WS623",
+      "price": "8280",
+      "model": "WS620 Walkman® WS Series",
+      "Image": "https://www.sony.co.in/image/6cd79f793d558aecaf269…t=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Waterproof and dustproof\nEasy Bluetooth® connectivity with NFC™ one touch pairing\nUp to 16GB on-board storage"
+    },
+    {
+      "id": "4",
+      "resolution": "NW-WS410 SERIES",
+      "price": "6990",
+      "model": "WS410 Walkman® WS Series",
+      "Image": "https://www.sony.co.in/image/50cb9b8e7d6b4aab16929…t=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "4 GB capacity\nWater proof (salt water) to 2 m depth\nWorks in temperatures from -5°C to 45°C"
+    },
+    {
+      "id": "5",
+      "resolution": "NW-E390 SERIES",
+      "price": "5980",
+      "model": "Walkman® digital music player",
+      "Image": "https://www.sony.co.in/image/83e0055176f25d1e90934…t=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "\nAvailable with 8 GB on-board storage\nUp to 35 hours of battery life\nDrag and drop file transfer"
+    },
+    {
+      "id": "6",
+      "resolution": "NWZ-B183F",
+      "price": "3990",
+      "model": "Walkman® with Built-in USB",
+      "Image": "https://www.sony.co.in/image/d9d55c4ca87d5fc87ee47…t=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Up to 4 GB on-board storage\nEnhanced sound quality with Bass Booster\nUp to 23 hrs battery life, 3 min quick charge"
+    }
+  ],
+  "headphones": [
+    {
+      "headphones_type": {
+        "id": "2",
+        "EXTRA": false,
+        "BASS": false,
+        "WIRELESS": true,
+        "MDR_XB450": false,
+        "MDR_ZX110": true,
+        "WHCH_510": false,
+        "XB450BV": false
+      },
+      "resolution": "WH-1000XM3",
+      "price": "2990",
+      "model": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones",
+      "Image": "https://www.sony.co.in/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "HD Noise Cancelling Processor QN1 lets you listen without distractions\nHigh-quality wireless audio with BLUETOOTH® and LDAC technology\nSmart listening experience by Adaptive Sound Control for a perfect noise cancelling experience",
+      "id": 2
+    },
+    {
+      "headphones_type": {
+        "id": "3",
+        "EXTRA": true,
+        "BASS": true,
+        "WIRELESS": false,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": false,
+        "XB450BV": true
+      },
+      "resolution": "WH-H910N",
+      "price": "24990",
+      "model": "WH-H910N h.ear on 3 Wireless Noise Cancelling Headphones",
+      "Image": "https://www.sony.co.in/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "High-Resolution Audio compatible\nDigital noise cancelling technology\nHigh-quality wireless audio with BLUETOOTH® and LDAC™ technology",
+      "id": 3
+    },
+    {
+      "headphones_type": {
+        "id": "4",
+        "EXTRA": false,
+        "BASS": true,
+        "WIRELESS": true,
+        "MDR_XB450": true,
+        "MDR_ZX110": false,
+        "WHCH_510": false,
+        "XB450BV": true
+      },
+      "resolution": "WH-XB900N",
+      "price": "19990",
+      "model": "WH-XB900N Wireless Noise Cancelling Headphones",
+      "Image": "https://www.sony.co.in/image/fe829b57ba9257c4535500aad1c7b0ae?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "EXTRA BASS™ for deep, punchy sound and Noise Cancelling\nHigh-quality wireless audio with Bluetooth® technology\nUp to 30 hours of battery life and quick charge\nHands-free calling for convenience",
+      "id": 4
+    },
+    {
+      "headphones_type": {
+        "id": "5",
+        "EXTRA": true,
+        "BASS": false,
+        "WIRELESS": true,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": true,
+        "XB450BV": false
+      },
+      "resolution": "WH-XB700",
+      "price": "9990",
+      "model": "WH-XB700 Bluetooth Wireless Headphones",
+      "Image": "https://www.sony.co.in/image/fe829b57ba9257c4535500aad1c7b0ae?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "EXTRA BASS™ for deep, punchy sound\nHigh-quality wireless audio with Bluetooth® technology\nUp to 30 hours of battery life and quick charge",
+      "id": 5
+    },
+    {
+      "headphones_type": {
+        "id": "6",
+        "EXTRA": true,
+        "BASS": true,
+        "WIRELESS": false,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": true,
+        "XB450BV": false
+      },
+      "resolution": "WH-CH710N",
+      "price": "14990",
+      "model": "WH-CH710N Wireless Noise Cancelling Headphones",
+      "Image": "https://www.sony.co.in/image/8e2364ea770052eb890f78ce3ad936f5?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Digital noise cancellation technology\nWireless BLUETOOTH® streaming with NFC™ One-touch\nUp to 35 hours of battery and quick charging",
+      "id": 6
+    },
+    {
+      "headphones_type": {
+        "id": "7",
+        "EXTRA": true,
+        "BASS": true,
+        "WIRELESS": false,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": false,
+        "XB450BV": true
+      },
+      "resolution": "WH-XB510AP",
+      "price": "3290",
+      "model": "MDR-XB550AP EXTRA BASS™ Headphones",
+      "Image": "https://www.sony.co.in/image/8e2364ea770052eb890f78ce3ad936f5?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "EXTRA BASS™ for deep, punchy sound\nSmartphone compatible in-line remote and mic\n30 mm driver unit",
+      "id": 7
+    },
+    {
+      "headphones_type": {
+        "id": "8",
+        "EXTRA": false,
+        "BASS": false,
+        "WIRELESS": true,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": true,
+        "XB450BV": false
+      },
+      "resolution": "WH-1000XM4",
+      "price": "4900",
+      "model": "WH-CH510 Wireless Headphones",
+      "Image": "https://www.sony.co.in/image/49aaabef1470fc5268be2851b95f7571?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "\nWireless BLUETOOTH® streaming\nUp to 35 hours of battery life and Quick Charging\nLightweight/Swivel design for portability",
+      "id": 8
+    },
+    {
+      "headphones_type": {
+        "id": "9",
+        "EXTRA": true,
+        "BASS": true,
+        "WIRELESS": false,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": false,
+        "XB450BV": false
+      },
+      "resolution": "WH-1000XM3",
+      "price": "3990",
+      "model": "XB450BV Extra Bass Headphones",
+      "Image": "https://www.sony.co.in/image/49aaabef1470fc5268be2851b95f7571?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "30 mm neodymium driver unit\nTight bass with the Electro Bass Booster\nVibration Bass adds beat synced vibs",
+      "id": 9
+    },
+    {
+      "headphones_type": {
+        "id": "10",
+        "EXTRA": true,
+        "BASS": true,
+        "WIRELESS": false,
+        "MDR_XB450": false,
+        "MDR_ZX110": false,
+        "WHCH_510": false,
+        "XB450BV": true
+      },
+      "resolution": "WH-CH710N",
+      "price": "2990",
+      "model": "MDR-XB450AP EXTRA BASS™ Headphones",
+      "Image": "https://www.sony.co.in/image/fe829b57ba9257c4535500aad1c7b0ae?fmt=pjpeg&wid=330&hei=330&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "\n30 mm driver unit\nTight bass with Beat Response Control\nSmartphone compatible in-line remote and mic",
+      "id": 10
+    }
+  ],
+  "products": [
+    {
+      "tv_type": {
+        "id": "Z9J",
+        "OLED": false,
+        "Full_Array_LED": true,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": true,
+        "MASTER_Series": true
+      },
+      "resolution": "8KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": true
+      },
+      "price": "1499900",
+      "model": "Z9J",
+      "Image": "https://www.sony.co.in/image/a3d125c00da05c06159fd24740c0bd69?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Zones of LEDs lit or dimmed independently for realistic brightness and shadow detail\nCognitive Processor XR™ understands how humans see and hear for true immersion\nSound in harmony with picture for an immersive experience\nMulti-position stand for versatile TV placement",
+      "id": 1
+    },
+    {
+      "tv_type": {
+        "id": "A80J",
+        "OLED": true,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": true,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": true,
+        "85": false
+      },
+      "price": "249900",
+      "model": "A80J",
+      "Image": "https://www.sony.co.in/image/cf24b41374702061b74b577da50a329d?fmt=png-alpha&wid=1014&hei=396",
+      "description": "OLED delivers unprecedented black, contrast and colour\nCognitive Processor XR™ understands how humans see and hear for true immersion\nScreen speaker with Processor XR turns any sound immersive\nMulti-position stand for versatile TV placement",
+      "id": 2
+    },
+    {
+      "tv_type": {
+        "id": "X90J",
+        "OLED": false,
+        "Full_Array_LED": true,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": true,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": true,
+        "85": false
+      },
+      "price": "159900",
+      "model": "X90J",
+      "Image": "https://www.sony.co.in/image/f6a735c74de46f284950974417018597?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Zones of LEDs lit or dimmed independently for realistic brightness and shadow detail\nCognitive Processor XR™ understands how humans see and hear for true immersion\nSound-positioning tweeters turn any sound immersive\nMinimalist design with narrow bezel for less distractions",
+      "id": 3
+    },
+    {
+      "tv_type": {
+        "id": "Z8H",
+        "OLED": false,
+        "Full_Array_LED": true,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "8KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": true
+      },
+      "price": "1499900",
+      "model": "Z8H",
+      "Image": "https://www.sony.co.in/image/32665495fb7d1408d450ee4fa1b96fe6?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Zones of LEDs lit or dimmed independently for realistic brightness and shadow detail\nPicture Processor X1™ Ultimate for unparalleled realism\nTake pictures closer to 8K with 8K X-Reality™ PRO\nSound in harmony with picture for an immersive experience",
+      "id": 4
+    },
+    {
+      "tv_type": {
+        "id": "A9G",
+        "OLED": true,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": true
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": false,
+        "85": false
+      },
+      "price": "299900",
+      "model": "A9G",
+      "Image": "https://www.sony.co.in/image/b9d313d55e24973ca53188d355aaffe2?fmt=png-alpha&wid=1014&hei=396",
+      "description": "OLED delivers unprecedented black, contrast and colour\nPicture Processor X1™ Ultimate for unparalleled realism\nMulti-dimensional sound from the screen with Acoustic Surface Audio+™\nFind entertainment by voice with Android TV™",
+      "id": 5
+    },
+    {
+      "tv_type": {
+        "id": "A8H",
+        "OLED": true,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": false,
+        "85": false
+      },
+      "price": "209900",
+      "model": "A8H",
+      "Image": "https://www.sony.co.in/image/7009465bd07ab552fcfacadc2141ad35?fmt=png-alpha&wid=1014&hei=396",
+      "description": "OLED delivers unprecedented black, contrast and colour\nPicture Processor X1™ Ultimate for unparalleled realism\nUpscale any content to 4K with 4K X-Reality™ PRO\nSound in harmony with picture for an immersive experience",
+      "id": 6
+    },
+    {
+      "tv_type": {
+        "id": "X95H",
+        "OLED": false,
+        "Full_Array_LED": true,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": true,
+        "85": false
+      },
+      "price": "549900",
+      "model": "X95H",
+      "Image": "https://www.sony.co.in/image/eb9568e51db705613eab781e407820c3?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Zones of LEDs lit or dimmed independently for realistic brightness and shadow detail\nPicture Processor X1™ Ultimate for unparalleled realism\nUpscale any content to 4K with 4K X-Reality™ PRO\nSound in harmony with picture for an immersive experience",
+      "id": 7
+    },
+    {
+      "tv_type": {
+        "id": "X90H",
+        "OLED": false,
+        "Full_Array_LED": true,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": false,
+        "85": false
+      },
+      "price": "129900",
+      "model": "X90H",
+      "Image": "https://www.sony.co.in/image/1f8b12dad8fe7f11f59c7372bf8d95cb?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Zones of LEDs lit or dimmed independently for realistic brightness and shadow detail\nRemarkable realism of 4K HDR Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nSound in harmony with picture for an immersive experience",
+      "id": 8
+    },
+    {
+      "tv_type": {
+        "id": "X85J",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": false,
+        "85": true
+      },
+      "price": "139900",
+      "model": "X85J",
+      "Image": "https://www.sony.co.in/image/f6789f1bd2161821864896b92f11735b?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Remarkable realism of 4K HDR Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nEnjoy personalised content and new entertainment with Google TV™",
+      "id": 9
+    },
+    {
+      "tv_type": {
+        "id": "X80J",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": true,
+        "55": true,
+        "65": true,
+        "75": true,
+        "85": false
+      },
+      "price": "82900",
+      "model": "X80J",
+      "Image": "https://www.sony.co.in/image/4ea841c42d23e79595504427d55b990e?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Remarkable realism of 4K HDR Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nEnjoy personalised content and new entertainment with Google TV™",
+      "id": 10
+    },
+    {
+      "tv_type": {
+        "id": "X80AJ",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": false,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": false,
+        "85": false
+      },
+      "price": "109900",
+      "model": "X80AJ",
+      "Image": "https://www.sony.co.in/image/4ea841c42d23e79595504427d55b990e?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Remarkable realism of 4K HDR Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nEnjoy personalised content and new entertainment with Google TV™",
+      "id": 11
+    },
+    {
+      "tv_type": {
+        "id": "X80H",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": true,
+        "55": true,
+        "65": true,
+        "75": true,
+        "85": true
+      },
+      "price": "729900",
+      "model": "X80H",
+      "Image": "https://www.sony.co.in/image/6ec2b015fc2b379b027b6f67feb01c81?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Remarkable realism of 4K HDR Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nExperience cinema thrills with Dolby vision and Dolby Atmos",
+      "id": 12
+    },
+    {
+      "tv_type": {
+        "id": "X75",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": true,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "73900",
+      "model": "X75",
+      "Image": "https://www.sony.co.in/image/f1231591e8a1e2fe4e5b6ad229a756c9?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Beautiful picture with 4K Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nFind entertainment by voice with Android TV™",
+      "id": 13
+    },
+    {
+      "tv_type": {
+        "id": "X74",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": true,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "69000",
+      "model": "X74",
+      "Image": "https://www.sony.co.in/image/f583f00170722d68bee4e2bdf3bf6f10?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Beautiful picture with 4K Processor X1™\nUpscale any content closer to 4K with 4K X-Reality™ PRO\nFind entertainment by voice with Android TV™",
+      "id": 14
+    },
+    {
+      "tv_type": {
+        "id": "X75H",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": true,
+        "55": true,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "61900",
+      "model": "X75H",
+      "Image": "https://www.sony.co.in/image/c0d1c600a6de14b4c6b4f2e9d68ded22?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Beautiful picture with 4K Processor X1™\nUpscale any content to 4K with 4K X-Reality™ PRO\nWide colour gamut with TRILUMINOS Display",
+      "id": 15
+    },
+    {
+      "tv_type": {
+        "id": "X74H",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "4KHDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": false,
+        "55": true,
+        "65": true,
+        "75": false,
+        "85": false
+      },
+      "price": "61900",
+      "model": "X74H",
+      "Image": "https://www.sony.co.in/image/53f4d740896881922b87461c41fc1777?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Beautiful picture with 4K Processor X1™\nUpscale any content to 4K with 4K X-Reality™ PRO\nWide colour gamut with TRILUMINOS Display",
+      "id": 16
+    },
+    {
+      "tv_type": {
+        "id": "W830",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": true,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "37900",
+      "model": "W830",
+      "Image": "https://www.sony.co.in/image/81085b8d3645acff8df9c82f77a99681?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Supports High Dynamic Range (HDR) video\nX-Reality™ PRO for enhanced HD quality\nFind entertainment by voice with Android TV™",
+      "id": 17
+    },
+    {
+      "tv_type": {
+        "id": "W820",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": true,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "34900",
+      "model": "W820",
+      "Image": "https://www.sony.co.in/image/ccbd1da6d53ff213951437e23593e60f?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Supports High Dynamic Range (HDR) video\nX-Reality™ PRO for enhanced HD quality\nFind entertainment by voice with Android TV™",
+      "id": 18
+    },
+    {
+      "tv_type": {
+        "id": "W67G",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": true,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": true,
+        "43": true,
+        "50": true,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "33990",
+      "model": "W67G",
+      "Image": "https://www.sony.co.in/image/39e11805de9455b65e527ba6abbd5310?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Full HD for the best HD experience\nClear and balanced high pressure sound with Dynamic Drive Speaker™\nAccess YouTube and more with built-in Wi-Fi®",
+      "id": 19
+    },
+    {
+      "tv_type": {
+        "id": "W66",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "53900",
+      "model": "W66",
+      "Image": "https://www.sony.co.in/image/c98e5b500fb6b81afb430bb0b6165d11?fmt=png-alpha&wid=1014&hei=396",
+      "description": "Full HD for the best HD experience\nX-Reality™ PRO for enhanced HD quality\nAccess YouTube and more with built-in Wi-Fi®",
+      "id": 20
+    },
+    {
+      "tv_type": {
+        "id": "W6603",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": false,
+        "43": true,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "53900",
+      "model": "W6603",
+      "Image": "https://www.sony.co.in/image/123266104ffc5935661f1c6b94d857e4?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "Full HD for the best HD experience\nX-Reality™ PRO for enhanced HD quality\nAccess YouTube and more with built-in Wi-Fi®",
+      "id": 21
+    },
+    {
+      "tv_type": {
+        "id": "W61",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": true,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "34900",
+      "model": "W61",
+      "Image": "https://www.sony.co.in/image/49fab4f1874691125352c20c32a6f2c2?fmt=png-alpha&wid=1014&hei=396",
+      "description": "X-Reality™ PRO for enhanced HD quality\nGreat sound matches the picture with ClearAudio+\nAccess YouTube and more with built-in Wi-Fi®",
+      "id": 22
+    },
+    {
+      "tv_type": {
+        "id": "W6103",
+        "OLED": false,
+        "Full_Array_LED": false,
+        "LED_Display": false,
+        "Smart_tv": true,
+        "HDMI": false,
+        "BRAVIA_XR": false,
+        "MASTER_Series": false
+      },
+      "resolution": "FULL_HDR",
+      "size": {
+        "32": true,
+        "43": false,
+        "50": false,
+        "55": false,
+        "65": false,
+        "75": false,
+        "85": false
+      },
+      "price": "29000",
+      "model": "W6103",
+      "Image": "https://www.sony.co.in/image/f0a8367a6dbbe4a9670f356ca6701341?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+      "description": "X-Reality™ PRO for enhanced HD quality\nGreat sound matches the picture with ClearAudio+\nAccess YouTube and more with built-in Wi-Fi®",
+      "id": 23
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Wick"
+    }
+  ]
+}

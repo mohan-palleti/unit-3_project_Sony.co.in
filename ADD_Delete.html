@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <span>
+          <h1>Add headphones</h1>
+          <!-- <label for="product">headphones type</label>
+          <br />
+          <br /> -->
+          <label for="id"> ID</label>
+          <input type="text" name="" placeholder="id" id="id" />
+          <br />
+<!-- 
+          <br /> -->
+
+          <!-- <input type="checkbox" name="EXTRA" id="EXTRA" />
+          <label for="EXTRA"> EXTRA</label><br />
+
+          <input type="checkbox" name="BASS" id="BASS" />
+          <label for="BASS"> BASS</label><br />
+
+          <input type="checkbox" name="WIRELESS" id="WIRELESS" />
+          <label for="WIRELESS"> WIRELESS</label><br />
+          <input type="checkbox" name="MDR-XB450" id="MDR-XB450" />
+          <label for="MDR-XB450">MDR-XB450</label><br />
+          <input type="checkbox" name="MDR-ZX110" id="MDR-ZX110" />
+          <label for="MDR-ZX110"> MDR-ZX110</label><br />
+          <input type="checkbox" name="WHCH-510" id="WHCH-510" />
+          <label for="WHCH-510"> WHCH-510</label><br />
+          <input type="checkbox" name="XB450BV" id="XB450BV" />
+          <label for="XB450BV">XB450BV</label><br /> -->
+          <hr />
+          <p>Resolution</p>
+          <select name="resolution" id="resolution">
+            <option value="">---</option>
+            <option value="NW-A100 SERIES">NW-A100 SERIES</option>
+            <option value="NW-A50 SERIES">NW-A50 SERIES</option>
+            <option value="NW-WS623">NW-WS623</option>
+            <option value="NW-WS410 SERIES">NW-WS410 SERIES</option>
+            <option value="NW-E390 SERIES">NW-E390 SERIES</option>
+            <option value="NWZ-B183F">NWZ-B183F</option>
+            
+          </select>
+          <!-- <input type="checkbox" name="8K_HDR" id="8K_HDR" />
+                <label for="8K_HDR"> 8K_HDR</label><br />
+                <input type="checkbox" name="4K_HDR" id="4K_HDR" />
+                <label for="4K_HDR"> 4K_HDR</label><br />
+                <input type="checkbox" name="Full_HD" id="Full_HD" />
+                <label for="Full_HD"> Full_HD</label><br /> -->
+          <hr />
+          <!-- <p>size</p>
+          <input type="checkbox" name="32" id="32" />
+          <label for="32"> 32</label><br />
+          <input type="checkbox" name="43" id="43" />
+          <label for="43"> 43</label><br />
+          <input type="checkbox" name="50" id="50" />
+          <label for="50"> 50</label><br />
+          <input type="checkbox" name="55" id="55" />
+          <label for="55"> 55</label><br />
+          <input type="checkbox" name="65" id="65" />
+          <label for="65"> 65</label><br />
+          <input type="checkbox" name="75" id="75" />
+          <label for="75"> 75</label><br />
+          <input type="checkbox" name="85" id="85" />
+          <label for="85"> 85</label><br />
+          <hr /> -->
+          <p>Price</p>
+          <input type="number" name="" placeholder="price" id="price" />
+          <p>MODEL</p>
+          <input type="text" id="model" placeholder="Model" />
+          <p>Image link</p>
+          <input type="text" placeholder="image url" id="image_url" />
+          <br />
+          <p>description</p>
+          <textarea
+            name="description"
+            id="description"
+            cols="50"
+            rows="10"
+          ></textarea>
+          <button onclick="addProduct()">add item</button>
+        </span>
+      </div>
+
+      <div>
+        <h1>delete product</h1>
+        <input type="text" placeholder="id number" id="delete_id" />
+        <button onclick="deleteProduct()">delete</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //to Add Items
+  async function addProduct() {
+    try {
+      let data = {
+
+        id: document.getElementById("id").value,
+        // headphones_type: {
+        //   id: document.getElementById("id").value,
+        //   EXTRA: document.getElementById("EXTRA").checked,
+        //   BASS: document.getElementById("BASS").checked,
+        //   WIRELESS: document.getElementById("WIRELESS").checked,
+        //   MDR_XB450: document.getElementById("MDR-XB450").checked,
+        //   MDR_ZX110: document.getElementById("MDR-ZX110").checked,
+        //   WHCH_510: document.getElementById("WHCH-510").checked,
+        //   XB450BV: document.getElementById("XB450BV").checked,
+        // },
+        resolution: document.getElementById("resolution").value,
+        // size: {
+        //   32: document.getElementById("32").checked,
+        //   43: document.getElementById("43").checked,
+        //   50: document.getElementById("50").checked,
+
+        //   55: document.getElementById("55").checked,
+        //   65: document.getElementById("65").checked,
+        //   75: document.getElementById("75").checked,
+        //   85: document.getElementById("85").checked,
+        // },
+        price: document.getElementById("price").value,
+        model: document.getElementById("model").value,
+        Image: document.getElementById("image_url").value,
+        description: document.getElementById("description").value,
+      };
+      data = JSON.stringify(data);
+      let response = await fetch("http://127.0.0.1:5000/api/mp3players", {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let d = await response.json();
+      console.log("data:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+  //Delete Items
+  async function deleteProduct() {
+    try {
+      let id = document.getElementById("delete_id").value;
+
+      let response = await fetch(`http://127.0.0.1:5000/api/headphones/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("d:", d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+</script>
