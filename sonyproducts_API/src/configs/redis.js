@@ -1,5 +1,5 @@
 const { createClient } = require("redis");
-
+require("dotenv").config();
 var redis = require("redis"),
   client = redis.createClient(
     17398,
@@ -7,7 +7,7 @@ var redis = require("redis"),
     { no_ready_check: true }
   );
 //if ("16VOc6jgIPBRo93T5NSKKLyRzmj45acl") {
-client.auth("16VOc6jgIPBRo93T5NSKKLyRzmj45acl", function () {
+client.auth(process.env.PASS, function () {
   console.log("Redis client connected");
 });
 //}
