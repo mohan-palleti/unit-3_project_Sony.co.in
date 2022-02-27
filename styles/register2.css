@@ -1,0 +1,158 @@
+/* body{
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+#container > h3 {
+  background-color: grey;
+  height: 90px;
+  background-color: #e7ebef;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.container-content {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.btn-details {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+} */
+body{
+  
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+#container > h3 {
+  
+  background-color: grey;
+  height: 90px;
+  background-color: #e7ebef;
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2f353d;
+  font-style: normal;
+  line-height: 29px;
+  
+  /* border: 4px solid red; */
+}
+.container-content {
+  padding: 0px 25px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  /* border: 4px solid red; */
+}
+.container-content > p {
+  margin-top: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+ 
+  /* border: 4px solid red; */
+}
+.btn-details {
+  
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+}
+.row{
+ 
+  cursor: pointer;
+}
+@media screen and (min-width: 372px) and (max-width: 821px) {
+  body {
+    position: relative;
+   
+  }
+}
+@media screen and (min-width: 0) and (max-width: 391px) {
+  body {
+    position: relative;
+  }
+ #capslock{
+   width: 60%;
+   
+ }
+  .reg{
+    margin-top: 200px;
+  }
+  #next{
+    margin-top: 10px;
+  }
+
+.row {
+  width: 50%;
+  text-align: center;
+  padding: 8px 0px;
+  border: 1px solid teal;
+  background-color: #5865f5;
+  border-radius: 5px;
+}
+.row .btn {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+.reg {
+  background-color: #e7ebef;
+  padding: 20px 10px;
+}
+.reg-title {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+#capslock > input {
+  width: 50%;
+  background-color: #e8f0fe;
+  border: 0.2px solid grey;
+  padding: 4px 5px;
+  margin-bottom: 20px;
+}
+#state {
+  width: 50%;
+  background-color: #e8f0fe;
+  border: 0.2px solid grey;
+  padding: 4px 0px;
+  margin-bottom: 20px;
+  
+}
+#register {
+  width: 600px;
+  margin: auto;
+}
+#next {
+  text-align: end;
+  padding-right: 50px;
+}
+#next a {
+  padding: 5px 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  background-color: #5887f5;
+  cursor: pointer;
+}
+#incheck {
+  margin-top: 50px;
+  text-align: center;
+}
+}
