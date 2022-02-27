@@ -63,7 +63,7 @@ body{
     padding: 4px 0px;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 376px) {
+@media only screen and (min-width: 0) and (max-width: 391px) {
   body {
     position: relative;
   }

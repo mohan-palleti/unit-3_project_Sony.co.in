@@ -80,7 +80,7 @@ body{
   color: #7385ee;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 376px) {
+@media only screen and (min-width: 0px) and (max-width: 391px) {
   .sinup > h3, .register > h3{
     line-height: 20px;
     font-size: 13px;
@@ -98,9 +98,9 @@ body{
   .maninD {
     width: auto;
   }
-}
-@media screen {
-  body {
-    position: relative;
+  .login_h2{
+    margin: auto;
+    top: 40px;
+    left: 20px;
   }
 }

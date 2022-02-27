@@ -103,7 +103,7 @@
             style="max-width: 100%; padding: 0px; margin-top: 0px"
         /></a>
         <li id="dropdown_button">
-          <a href="">Electronics</a>
+          <a href="./tv.html">Electronics</a>
           <div class="dropdown_list">
             <div class="container_list">
               <div class="list_box1">
@@ -331,10 +331,11 @@
       <!-- address of sony centre  START  -->
       <div class="select_map">
         <div id="input_search_box">
-          <form>
-            <input type="number" id="pincode" placeholder="Enter pincode" />
-            <input type="submit" id="pincode_submit_btn" onclick="getpin()" />
-          </form>
+          <input type="text" id="pincode" placeholder="Enter pincode" />
+          <!-- <input type="submit" id="pincode_submit_btn" onclick="getpin()" /> -->
+          <button id="pincode_submit_btn"  onclick="getpin(event)">
+            submit
+          </button>
         </div>
         <div id="sony_center_locations">
           <div onclick="pincode(482002)">

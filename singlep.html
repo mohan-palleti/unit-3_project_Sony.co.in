@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Step 3</title>
+    <title>Single Product</title>
     <script
       src="https://kit.fontawesome.com/683b4b40e3.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/response.css" />
-    <link rel="stylesheet" href="./styles/register3.css" />
+    <link rel="stylesheet" href="./styles/singlep.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!-- TOP MENU START -->
@@ -247,29 +248,268 @@
     </nav>
     <!-- -------------------navbar end------------------------ -->
 
-    <div id="container">
-      <h3>eNewsletter Subscription</h3>
+    <!-- -------------------PRoduct Titile------------------------ -->
+    <div class="Phead">
+      <div class="iconhead" onclick="headclick()" onmouseover="headover()" onmouseout="headout()">
+        <span>
+          <i class="material-icons">chevron_left</i>
+        </span>
+        <span class="Pname">TELEVISIONS</span>
+      </div>
+    </div>
+    <!-- product discriptions -->
+    <div class="productdisc">
+      <p> WH-1000XM4 WIRELESS NOISE CANCELLING HEADPHONES</p>
+    </div>
+    <!-- product disply -->
+    <div class="product_continer">
+      <div class="grid_continer"> 
+        <div class="div_left">
+          <!-- product title -->
+          <div class="ptitle">
+            <p>The smarter way to enjoy industry- leading noise cancelling and Premium sound</p>
+          </div>
+          <br>
+          <span id="s1">
+          WH-1000XM4/SMIN
+          </span>
+          <!-- product star -->
+          <div class="star">
+            <i class="material-icons" style="font-size:18px;color:#dc3a1a">star</i>
+            <i class="material-icons" style="font-size:18px;color:#dc3a1a">star</i>
+            <i class="material-icons" style="font-size:18px;color:#dc3a1a">star</i>
+            <i class="material-icons" style="font-size:18px;color:#dc3a1a">star</i>
+            <i class="material-icons" style="font-size:18px;color:#dc3a1a">star_half</i>
+            <span> (758 customer reviews) </span>
+          </div>
+          <!-- about product -->
+          <div class="about_product">
+            <p>
+              Headband style High-Resolution Audio headphones with industry-leading noise cancellation, Adaptive Sound Control,
+              and Speak-to-Chat mode.
+            </p>
+            <!-- color box -->
+            </div class="colours">
+            <div class="colours_title">
+              <!-- <span> COLOUR </span> -->
+            </div>
+            <div class="box_color">
+              <!-- <div class="color_blue"></div>
+              <div class="silver">
+                <i class="material-icons" style="font-size:26px">check_circle</i>
+              </div> -->
+              <!-- <div class="black"></div> -->
+              <!-- <div class="color_name">
+                <span>
+                  Silver
+                </span>
+              </div> -->
+            </div>
+            <!-- MRP-->
+            <div class="mrp_continer">
+              <span class="mrp1">
+                MRP
+              </span>
+              <span class="mrp2">
+                Rs. 29,990
+              </span>
+              <span class="mrp3">
+                (incl. of all taxes)
+              </span>
+            </div>
+            <!-- Button-->
+            <div class="btn_continer">
+              <button class="btn_online">
+                  Buy Online
+              </button>
+            </div>
+          </div>
+          <div class="div_right">
+            <!-- for slidshow -->
+            <div class="slideshow-container" onmouseover="nextprev()" onmouseout="prevnext()">
 
-      <div class="custom">
-        <div>
-          <h3>Step3 of 3: Your account has been created.</h3>
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <div class="slideImgDiv">
+                  <img class="img1" src="">
+                </div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <div class="slideImgDiv">
+                  <img class="img2" src="">
+                </div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <div class="slideImgDiv">
+                  <img class="img3" src="">
+                </div>
+              </div>
 
-          <p>Thank you for subscribing to our eNewsletter!</p>
-          <p>
-            You can proceed to login to your Sony account to manage newsletter
-            subscription.
-          </p>
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <div class="slideImgDiv">
+                  <img class="img4" src="">
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <div class="slideImgDiv">
+                  <img class="img5" src="">
+                </div>
+              </div>  
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+            </div>
+            <br>
+                
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+          </div>
         </div>
-        <div class="reg">
-          <a href="./login.html">Sign In Now</a>
+        <!-- for hr -->
+        <br><br><br>
+        <div class="hr">
+          <hr>
         </div>
-        <div>
-          <p>
-            Regards,<br />
-            Sony India Team
-          </p>
+        <!-- for Buy onlie products -->
+        <div class="buyOnline">
+          <div class="by_online_title">
+            <h3>
+            Buy Online
+            </h3>
+          </div>
+          <div class="buy_online_text">
+            <p>
+                This product is available at major third-party owned online retailers including the ones below:  
+            </p>
+          </div>
+
+          <!-- For third-party owned online retailers -->
+          <div class="onlie_retailers">
+              
+            <!-- <div class="r1">
+              <div class="retailers_internal">
+              <img src="https://cdn.channelsight.com/retailerlogos/set_80/b38676b9-1c99-4eee-9ec0-975bc194ac47.png">
+              <p style="color: #c9d152;">In Stock</p>
+              <br>
+              <button id="btn_visitStore">
+                  Visit Store
+              </button>
+              </div>
+            </div> -->
+            <div class="r2">
+              <div class="retailers_internal">
+                <img src="https://cdn.channelsight.com/retailerlogos/set_80/850966ad-15f2-413b-9ec8-ef2f84e44167.png">
+                <p style="color: #c9d152;"></p>
+                <br>
+                <button id="btn_visitStore" class="amazonbtn">
+                    Visit Store
+                </button>
+              </div>
+            </div>
+            <div class="r3">
+              <div class="retailers_internal">
+                <img src="https://cdn.channelsight.com/retailerlogos/set_80/181df5f2-323a-4ef1-8295-fd8d93bb2a83.png">
+                <p style="color: #c9d152;"></p>
+                <br>
+                <button id="btn_visitStore" class="flipkartbtn">
+                  Visit Store
+                </button>
+              </div>
+            </div>
+            <!-- <div class="r4">
+              <div class="retailers_internal">
+                <img src="https://cdn.channelsight.com/retailerlogos/set_80/1f741cab-e563-49ac-a3da-30452b098848.png">
+                <p style="color: #c9d152;">In Stock</p>
+                <br>
+                <button id="btn_visitStore">
+                  Visit Store
+                </button>
+              </div>
+            </div> -->
+            <!-- <div class="r5">
+              <div class="retailers_internal">
+                <img src="https://cdn.channelsight.com/retailerlogos/set_80/e309e83c-489c-48cb-870a-1e6a6f51fd8b.png">
+                <p style="color: #c9d152;">In Stock</p>
+                <br>
+                <button id="btn_visitStore">
+                  Visit Store
+                </button>
+              </div>
+            </div> -->
+            <div class="r6">
+              <div class="retailers_internal">
+                <img src="https://cdn.channelsight.com/retailerlogos/set_80/023e9389-a6bc-4498-88ba-06c7761b8d37.png">
+                <p style="color: #c9d152;"></p>
+                <br>
+                <button id="btn_visitStore" class="vijaybtn">
+                  Visit Store
+                </button>
+              </div>
+            </div>
+            <!-- <div class="r7">
+              <div class="retailers_internal">
+                <img src="https://cdn.channelsight.com/retailerlogos/set_80/eeb5e407-7199-4681-b0de-a256db28aabc.png">
+                <p style="color: #c9d152;">In Stock</p>
+                <br>
+                <button id="btn_visitStore">
+                  Visit Store
+                </button>
+              </div>
+            </div> -->
+          </div>
         </div>
       </div>
+    </div>
+    <!--sonyCenter_continer-->
+    <div class="sonyCenter_continer">
+      <div class="sonyCenter_leftside">
+        <p> Buy from our third party<br> franchisees-Sony Center,<br>Online Purchase Available Now! </p>
+        
+        <div class="leftsideOne"> 
+          <span id="span1">
+            The trust of Sony Center stores meets the ease of online <br>shopping. 
+            The ultimate SONY experience, fulfilled by Sony <br>Center, 
+            with the same level of trust, reliability and faster <br>delivery!
+          </span>
+        </div>
+          <div class="visitBtn">
+            <button>
+              Visit  
+            </button>
+          </div>
+      </div>
+      <div class="sonyCenter_rightside">
+        <div class="rightside_image">
+          <img src="https://www.sony.co.in/image/af42d0d7427c57ceae20aec88994ba70?fmt=jpeg&wid=580&qlt=85"> 
+        </div>
+      </div>
+    </div>
+    <div class="vistCenter_container">
+      <div class="visitCenter__title">
+        <p>
+          Find Local Store
+        </p>
+      </div>
+      <div class="visitbtncenter">
+        <a href="./retail.html"><button style="cursor: pointer">
+          visit
+        </button>
+        </a>
+      </div>
+
     </div>
 
     <button class="accordion">Footnotes</button>
@@ -318,7 +558,7 @@
 
             <button>Search</button>
           </div>
-          <a href="retail.html">See Our location</a>
+          <a href="./retail.html">See Our location</a>
         </div>
         <div id="support">
           <h4>Support</h4>
@@ -493,5 +733,6 @@
   <script src="./scripts/response.js"></script>
   <script src="./scripts/navbar.js"></script>
   <script src="./scripts/search.js"></script>
+  <script src="./scripts/singlep.js"></script>
   <script src="./scripts/footer.js"></script>
 </html>

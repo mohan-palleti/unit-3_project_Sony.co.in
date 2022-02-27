@@ -41,6 +41,9 @@ input {
   width: 95%;
   height: 30px;
   border-radius: 5px;
+  font-size: 18px;
+  padding: 5px;
+  padding-left: 10px;
 }
 .forgot {
   text-decoration: none;
@@ -60,8 +63,25 @@ input {
   border-radius: 4px;
   cursor: pointer;
 }
-@media screen {
+@media screen and (min-width: 0) and (max-width: 391px) {
   body {
     position: relative;
+  }
+  #logindiv{
+    width: 352px;
+  }
+  input{
+    width: 93%;
+  }
+  #login_btn{
+    margin-left: 110px;
+  }
+}
+@media screen and (min-width: 392px) and (max-width: 812px) {
+  body {
+    position: relative;
+  }
+  #login_btn{
+    margin-left: 160px;
   }
 }

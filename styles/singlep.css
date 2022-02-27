@@ -1,0 +1,507 @@
+body {
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+.Phead {
+  margin-top: 30px;
+  margin-left: 180px;
+}
+.iconhead{
+  width: 120px;
+  display: flex;
+  color: #747481;
+  cursor: pointer;
+}
+.Pname{
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+.productdisc {
+  margin-left: 180px;
+  font-family: "SST W01 Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+}
+.product_continer {
+  margin-top: 10px;
+  background-color: #f1f5f9;
+  height: 830px;
+  width: 100%;
+}
+.grid_continer {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-left: 180px;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 100px;
+}
+.div_left {
+  margin-top: 15px;
+
+  width: 500px;
+}
+.div_right {
+  height: 200px;
+  width: 600px;
+}
+.ptitle > p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#s1 {
+  color: #747481;
+  font-size: 10px;
+  font-stretch: expanded;
+}
+
+.star {
+  margin-top: 10px;
+}
+.star > span {
+  color: blue;
+  font-size: 10px;
+  font-weight: lighter;
+}
+.about_product {
+  margin-top: 10px;
+  color: #747481;
+  font-size: 12px;
+  font-stretch: expanded;
+  line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.colours_title {
+  margin-top: 15px;
+  color: #747481;
+  font-size: 12px;
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.box_color {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 35px 35px 35px 35px;
+  grid-gap: 10px;
+}
+.color_blue {
+  height: 35px;
+  width: 35px;
+  background-color: blue;
+}
+.silver i {
+  padding: 5px;
+}
+.silver {
+  height: 35px;
+  width: 35px;
+  background-color: #747481;
+}
+.black {
+  height: 35px;
+  width: 35px;
+  background-color: black;
+}
+.color_name {
+  color: #747481;
+  font-size: 15px;
+  padding: 8px;
+}
+.mrp_continer {
+  margin-top: 20px;
+}
+.mrp1,
+.mrp3 {
+  font-size: 12px;
+  color: #747481;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.mrp2 {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn_continer {
+  margin-top: 20px;
+}
+.btn_online {
+  background-color: #dc3a1a;
+  height: 60px;
+  width: 210px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 0px;
+  color: wheat;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 650px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+}
+
+.slideImgDiv{
+  display: flex;
+  justify-content: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+} */
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hr {
+  padding: 70px;
+  width: 1250px;
+  margin-left: 110px;
+}
+.buyOnline {
+  margin-left: 180px;
+}
+.buy_online_text {
+  margin-top: 10px;
+  color: #747481;
+  font-size: 15px;
+}
+.onlie_retailers {
+  margin-top: 25px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  margin-right: 120px;
+}
+.r1,
+.r2,
+.r3,
+.r4,
+.r5,
+.r6,
+.r5 {
+  background-color: #ffffff;
+  margin-right: 10px;
+}
+.retailers_internal {
+  padding: 15px;
+  text-align: center;
+}
+#btn_visitStore {
+  background-color: #dc3a1a;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  color: #ffffff;
+  border: 0px;
+  font-size: 15px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.sonyCenter_continer {
+  margin-left: 150px;
+  margin-top: 10px;
+  /* border: 1px solid red; */
+  height: 350px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.sonyCenter_leftside {
+  padding-top: 50px;
+  padding-left: 50px;
+  height: 250px;
+  width: 100%;
+  /* border: 1px solid green; */
+  font-size: x-large;
+}
+.sonyCenter_leftside p {
+  color: #2f353e;
+}
+#three {
+  text-decoration: none;
+}
+.leftsideOne {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #747481;
+  font-weight: 15px;
+  line-height: 20px;
+}
+.visitBtn button {
+  margin-top: 20px;
+  background-color: #5865f5;
+  height: 40px;
+  width: 80px;
+  font-size: 20px;
+  color: #ffffff;
+  border: 0px;
+  font-size: 15px;
+}
+.sonyCenter_rightside {
+  /* border: 1px solid saddlebrown; */
+  height: 100%;
+  width: 100%;
+}
+.rightside_image {
+  margin-top: 30px;
+  padding: 30px;
+}
+.vistCenter_container p {
+  margin-top: 20px;
+  margin-left: 150px;
+  text-align: center;
+  font-size: xx-large;
+  color: #2f353e;
+}
+.visitbtncenter button {
+  margin-top: 20px;
+  background-color: #5865f5;
+  height: 40px;
+  width: 80px;
+  font-size: 20px;
+  color: #ffffff;
+  border: 0px;
+  font-size: 15px;
+  margin-left: 50%;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (min-width: 0px) and (max-width: 391px) {
+  .Phead{
+    margin-left: 20px;
+  }
+  .productdisc{
+    margin-left: 20px;
+  }
+  .product_continer{
+    height: 800px;
+  }
+  .grid_continer{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .div_left{
+    width: 300px;
+  }
+  .div_right{
+    width: 300px;
+  }
+  .slideshow-container{
+    width: 330px;
+    margin-left: 0px;
+    height: 250px;
+  }
+  .next{
+    transition: all 0.6s ease 0s;
+    background-color: grey;
+  }
+  .prev{
+    transition: all 0.6s ease 0s;
+    background-color: grey;
+  }
+  .slideshow-container > div > div > img{
+    margin-top: 50px;
+    width: 450px;
+  }
+  .hr{
+    width: 300px;
+    margin-left: 0px;
+    padding: 40px;
+  }
+  .buyOnline{
+    margin-left: 20px;
+  }
+  .onlie_retailers{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
+  .sonyCenter_continer{
+    margin-top: 600px;
+    margin-left: 0px;
+    grid-template-columns: 300px;
+    height: 600px;
+  }
+  .sonyCenter_leftside{
+    padding-left: 20px;
+  }
+  .rightside_image{
+    padding: 10px;
+  }
+  .rightside_image > img{
+    width: 300px;
+  }
+  .vistCenter_container p{
+    margin-left: 0px;
+  }
+  .visitbtncenter button{
+    margin-left: 40%;
+  }
+}
+
+@media only screen and (min-width: 392px) and (max-width: 821px){
+  .Phead{
+    margin-left: 20px;
+  }
+  .productdisc{
+    margin-left: 20px;
+  }
+  .product_continer{
+    height: 800px;
+  }
+  .grid_continer{
+    margin-left: 20px;
+  }
+  .div_left{
+    width: 300px;
+  }
+  .div_right{
+    width: 300px;
+  }
+  .slideshow-container{
+    width: 330px;
+    margin-left: 0px;
+    height: 250px;
+  }
+  .next{
+    transition: all 0.6s ease 0s;
+    background-color: grey;
+  }
+  .prev{
+    transition: all 0.6s ease 0s;
+    background-color: grey;
+  }
+  .slideshow-container > div > div > img{
+    margin-top: 50px;
+    width: 450px;
+  }
+  .hr{
+    width: 740px;
+    margin-left: 0px;
+    padding: 40px;
+  }
+  .buyOnline{
+    margin-left: 20px;
+  }
+  .sonyCenter_continer{
+    margin-left: 0px;
+    grid-template-columns: repeat(2, 380px);
+    gap: 20px;
+    height: 350px;
+  }
+  .sonyCenter_leftside{
+    padding-left: 20px;
+  }
+  .rightside_image{
+    padding: 10px;
+  }
+  .rightside_image > img{
+    width: 400px;
+  }
+  .vistCenter_container p{
+    margin-left: 0px;
+  }
+  .visitbtncenter button{
+    margin-left: 45%;
+  }
+}
+

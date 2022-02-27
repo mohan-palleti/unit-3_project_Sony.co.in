@@ -37,7 +37,6 @@ searchbutton.addEventListener("click",()=>{
   }else{
     drop_search.style.display="none";
   }
- 
 });
 
 // top menu 
@@ -59,6 +58,8 @@ open.addEventListener("click",()=>{
   topmenu.classList.toggle('topmenu_co');
   topmenu_container.classList.toggle('o_class_top');
 });
+
+let 
 
 
 

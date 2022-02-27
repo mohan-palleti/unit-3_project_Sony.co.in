@@ -4,9 +4,10 @@ body {
   overflow-x: hidden;
 }
 .retail_category {
+  /* border: 10px solid black; */
   display: grid;
   grid-template-columns: 37% 30% 25%;
-  grid-template-rows: 95%;
+
   gap: 20px;
   height: 85%;
 }
@@ -16,6 +17,7 @@ body {
   background-color: #e8edf3;
 }
 .retail_category > div:nth-child(1) {
+  
   background-color: white;
 }
 .text-container {
@@ -64,6 +66,7 @@ body {
 }
 
 .retail_sm {
+  
   width: 80%;
   margin: auto;
 
@@ -81,11 +84,12 @@ body {
 /* sony centre address box  start*/
 
 .select_map {
+ 
   font-family: "SST W01 Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid rgb(155, 154, 154);
   width: 35%;
   height: 100%;
-
+  
   overflow: scroll;
   text-align: left;
   border: none;
@@ -94,15 +98,18 @@ body {
   color: blue;
 }
 #sony_center_locations > div {
+  /* border: 4px solid red; */
   display: flex;
   cursor: pointer;
   border-bottom: 1px solid gray;
   transition: all 0.2s ease-in;
 }
 #sony_center_locations > div:hover {
+  /* border: 4px solid red; */
   background-color: rgb(214, 209, 209);
 }
 .fa-map-marker-alt {
+  /* border: 4px solid red; */
   margin-top: 10px;
   font-size: xx-large;
   padding: 10px;
@@ -131,6 +138,7 @@ body {
 /* ------- */
 /*--------- For Maps------- */
 .gmap_canvas {
+  /* border: 4px solid red; */
   overflow: hidden;
   background: none !important;
   height: 100%;
@@ -159,8 +167,15 @@ iframe {
   margin-right: auto;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 378px) {
+
+@media only screen and (min-width: 392px) and (max-width: 821px){
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 391px) {
   .retail_category {
+    
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 25% 33% 33%;
@@ -173,20 +188,23 @@ iframe {
     background-color: #e8edf3;
   }
   #image_retail {
+    
     width: 100%;
     height: 30%;
     overflow: hidden;
   }
-  .select_map{
-    width: 55%;
+ 
+  
   }
   #pincode{
+    /* border: 2px solid red; */
     width: 90%;
   }
+ 
   #onlinestore{
     margin-top: 50px;
   }
-}
+
 
 /* ---------b2b and online store----------------- */
 #cont {
@@ -611,14 +629,45 @@ button:hover {
   width: 300px;
   justify-content: space-evenly;
 }
-@media only screen and (max-width: 913px) {
+#pincode_submit_btn
+{
+  padding: 10px; border: 1px solid black;
+}
+@media only screen and (min-width:392px) and (max-width: 822px) {
   #dealer2 > div:nth-child(2) {
    
     grid-template-columns: repeat(3, 1fr);
   }
+  .retail_header {
+   
+    width: 100%;
+    height: 550px;
+    
+  }
+  .retail_category {
+    /* border: 10px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  
+    gap: 10px;
+   
+  }
+
+  .text-container > a{
+    font-size: 10px;
+  }
+
+  #image_retail img{
+    height: 100%;
+    transform: translateY(0%);
+  }
+
+  #pincode{
+    padding: 10px;
+  }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 0px) and (max-width: 391px) {
   #authdealer1 {
     /* border: 2px solid red; */
     display: grid;
@@ -638,6 +687,28 @@ button:hover {
     padding-bottom: 200px;
   }
   #store > div > img {
+    width: 100%;
+  }
+  .__dealer-locator-root{
+    display: block;
+  }
+  #input_search_box{
+    display: flex;
+  }
+  #pincode_submit_btn{
+    padding: 5px;
+    border: 1px solid black;
+  }
+  .select_map{
+    width: 90%;
+    height: 50%;
+  }
+  .mapouter{
+    width: 90%;
+    margin-top: 20px;
+  }
+  .gmap_canvas{
+    height: 300px;
     width: 100%;
   }
 }

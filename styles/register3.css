@@ -32,12 +32,12 @@ body{
   font-weight: 400;
   background-color: #5887f5;
 }
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (min-width: 392px) and (max-width: 768px) {
   body {
     position: relative;
   }
 }
-@media screen and (min-width: 0) and (max-width: 375px) {
+@media screen and (min-width: 0) and (max-width: 391px) {
   body {
     position: relative;
   }

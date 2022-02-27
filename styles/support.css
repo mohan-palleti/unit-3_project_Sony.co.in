@@ -272,6 +272,7 @@ body {
   background-color: #0066ff;
 
   padding: 12px 40px;
+  color: white;
 }
 #community {
   margin: auto;
@@ -317,7 +318,7 @@ body {
   font-size: 30px;
   font-weight: 500;
 }
-@media only screen and (min-width: 0px) and (max-width: 376px) {
+@media only screen and (min-width: 0px) and (max-width: 391px) {
   .search-title{
     margin-left: 25px;
   }
@@ -329,6 +330,14 @@ body {
 
   .all{
     width: 45%;
+  }
+
+  #div1 > a{
+    font-size: 13px;
+  }
+
+  .d > span{
+    font-size: 13px;
   }
 
   .dropbtn{
@@ -355,5 +364,47 @@ body {
 
   .products{
     margin-left: 15px;
+  }
+
+  .product_list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  #community{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 0px;
+  }
+
+  #page{
+    width: 100%;
+  }
+
+  .yesno{
+    margin-left: 50px;
+  }
+
+  #page a{
+    color: white;
+  }
+
+}
+
+@media only screen and (min-width: 392px) and (max-width: 821px) {
+  .middlline{
+    height: 80px;
+  }
+  .continer{
+    margin-left: 50px;
+  }
+  .import_impormation{
+    margin-left: 0px;
+  }
+  .products{
+    margin-left: 50px;
+  }
+  .product_list{
+    grid-template-columns: repeat(4, 1fr);
   }
 }
