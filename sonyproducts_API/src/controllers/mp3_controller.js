@@ -36,7 +36,7 @@ router.post("", async (req, res) => {
 });
 router.delete("/:id", async (req, res) => {
   try {
-    const mp3player = await Mp3player.findByIdAndDelete(req.body);
+    const mp3player = await Mp3player.findByIdAndDelete(req.params.id);
     const mp3p = await Mp3player.find().lean().exec();
     redis.set("mp3player", JSON.stringify(mp3p));
     return res.status(201).send(mp3player);

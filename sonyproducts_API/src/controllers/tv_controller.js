@@ -23,6 +23,25 @@ router.get("", async (req, res) => {
     return res.status(501).send(err.message);
   }
 });
+router.get("/search", async (req, res) => {
+  try {
+    let term = req.query.s;
+
+    let resultTV = await TVmodels.find({ $text: { $search: term } })
+      .lean()
+      .exec();
+    let resultHEAD = await Headphone.find({ $text: { $search: term } })
+      .lean()
+      .exec();
+    let resultmp3 = await Mp3player.find({ $text: { $search: term } })
+      .lean()
+      .exec();
+
+    return res.status(201).send({ resultTV, resultHEAD, resultmp3 });
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
 
 router.post("", async (req, res) => {
   try {
@@ -36,7 +55,7 @@ router.post("", async (req, res) => {
 });
 router.delete("/:id", async (req, res) => {
   try {
-    const models = await TVmodels.findByIdAndDelete(req.body);
+    const models = await TVmodels.findByIdAndDelete(req.params.id);
     const allmodels = await TVmodels.find().lean().exec();
     redis.set("tv", JSON.stringify(allmodels));
     return res.status(201).send(models);

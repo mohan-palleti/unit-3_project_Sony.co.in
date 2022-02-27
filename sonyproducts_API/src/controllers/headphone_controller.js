@@ -36,7 +36,7 @@ router.post("", async (req, res) => {
 });
 router.delete("/:id", async (req, res) => {
   try {
-    const headphone = await Headphone.findByIdAndDelete(req.body);
+    const headphone = await Headphone.findByIdAndDelete(req.params.id);
     const head = await Headphone.find().lean().exec();
     redis.set("headphone", JSON.stringify(head));
     return res.status(201).send(headphone);
