@@ -133,27 +133,64 @@ body {
   background-color: #72727f;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 376px) {
-  .left>p, .left>h2{
+@media only screen and (min-width: 392px) and (max-width: 821px) {
+  .right {
+    display: none;
+  }
+  .left > p,
+  .left > h2 {
     margin-left: 40px;
   }
 
-  #filterDiv > div:nth-child(1){
+  #filterDiv > div:nth-child(1) {
     margin-left: 0px;
   }
 
-  #fDiv{
+  #fDiv {
     display: block;
     overflow: scroll;
   }
 
-  #getdata{
-    margin-left: 20px;
+  #getdata {
+    /* border: 2px solid red; */
+    margin-left: 10px;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 350px;
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  #sortdiv{
-    margin-left: 150px;
+  #sortdiv {
+    margin-left: 335px;
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 391px) {
+
+  .right {
+    display: none;
+  }
+  .left > p,
+  .left > h2 {
+    margin-left: 40px;
+  }
+
+  #filterDiv > div:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  #getdata {
+    /* border: 2px solid red; */
+    margin: 0px;
+    justify-content: center;
+    display: grid;
+
+    grid-template-columns: repeat(1, 340px);
+  }
+
+  #sortdiv {
+    margin-left: 140px;
+    margin-bottom: 50px;
+  }
+}
+

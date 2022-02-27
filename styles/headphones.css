@@ -132,6 +132,7 @@ body {
   color: white;
   background-color: #72727f;
 }
+
 @media only screen and (min-width: 0px) and (max-width: 376px) {
   .left>p, .left>h2{
     margin-left: 40px;
@@ -154,5 +155,41 @@ body {
 
   #sortdiv{
     margin-left: 150px;
+  }
+
+  #sort {
+    font-size: 11px;
+    padding: 8px;
+  }
+}
+
+@media only screen and (min-width: 392px) and (max-width: 821px) {
+  .right {
+    display: none;
+  }
+  .left > p,
+  .left > h2 {
+    margin-left: 40px;
+  }
+
+  #filterDiv > div:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  #fDiv {
+    display: block;
+    overflow: scroll;
+  }
+
+  #getdata {
+    margin-left: 0px;
+    justify-content: center;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2,350px);
+  }
+
+  #sortdiv {
+    margin-left: 330px;
   }
 }

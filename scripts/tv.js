@@ -1,92 +1,95 @@
-var arr = JSON.parse(localStorage.getItem("products")) || [];
+var arr;
+let getdata = document.getElementById("getdata");
+
 get();
 
 async function get() {
   try {
-    let response = await fetch(`http://127.0.0.1:5000/api/products`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    //http://127.0.0.1:5000/api/products
+    let response = await fetch(
+      `https://sonyproducts.herokuapp.com/tvProducts`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     let data = await response.json();
-    console.log(data);
-    appendproduct(data);
-    localStorage.setItem("products",JSON.stringify(data));
+    let dtv = data.TV;
+    console.log(dtv);
+    arr = dtv;
+    appendproduct(dtv);
+    localStorage.setItem("tvproducts", JSON.stringify(dtv));
   } catch (err) {
     console.log(err);
   }
 }
-let getdata = document.getElementById("getdata");
 
 function appendproduct(data) {
   getdata.innerHTML = "";
   let pLength = document.querySelector(".pLength");
   pLength.innerHTML = data.length + " Products";
   pLength.style.fontWeight = "bold";
-  data.map(function(ele){
+  data.map(function (ele) {
     let main = document.createElement("div");
     main.setAttribute("id", "main");
 
     let imgDiv = document.createElement("div");
-    imgDiv.setAttribute("id","imgDiv");
+    imgDiv.setAttribute("id", "imgDiv");
 
     let img = document.createElement("img");
     img.setAttribute("id", "img");
-    img.src = ele.Image;
+    let tvimages = ele.Image;
+    img.src = tvimages[0];
     imgDiv.append(img);
 
     let div1 = document.createElement("div");
     div1.setAttribute("id", "div1");
-    var head = "";
-    for (var x in ele.tv_type) {
-      if (ele.tv_type[x] == true) {
-        var a = x.split("");
-        for(var i=0; i<a.length; i++){
-          if(a[i] == "_"){
-            a[i] = " ";
-          }
-        } 
-        a = a.join("");
-        head = head + a + " | ";
-      }
+    let head = [];
+    let tvtype = ele.tv_type;
+    for (let i = 0; i < tvtype.length; i++) {
+      let tp = tvtype[i];
+      let th = tp.replace(/_/g, " ");
+      head.push(th);
     }
-    div1.append(head);
+    let gh = head.join(" | ");
+    div1.append(gh);
     let div2 = document.createElement("div");
     div2.setAttribute("id", "div2");
     let desc = document.createElement("h4");
-    desc.innerHTML = "DESCRIPTION  :" + ele.description;
+    desc.innerHTML = ele.description;
     div2.append(desc);
     let div3 = document.createElement("div");
     div3.setAttribute("id", "div3");
     let resolution = document.createElement("h4");
-    resolution.innerHTML = "RESOLUTION  :" + ele.resolution;
+    resolution.innerHTML = "RESOLUTION : " + ele.resolution;
     div3.append(resolution);
     let div4 = document.createElement("div");
     div4.setAttribute("id", "div4");
     let sizetext = document.createElement("h4");
     sizetext.innerText = "SIZE : ";
     let size = document.createElement("h4");
-    size.setAttribute("class","size");
-    let s = "";
-    for (var x in ele.size) {
-      if (ele.size[x] == true) {
-        s = s + x + " ch | ";
-      }
+    size.setAttribute("class", "size");
+    let s = [];
+    let sh = ele.size;
+    for (let i = 0; i < sh.length; i++) {
+      let yh = sh[i] + " ch";
+      s.push(yh);
     }
-    size.textContent = " "+s;
-    div4.append(sizetext,size);
+    size.textContent = " " + s.join(" | ");
+    div4.append(sizetext, size);
     let div5 = document.createElement("div");
     div5.setAttribute("id", "div5");
     let model = document.createElement("h4");
-    model.innerHTML = "MODEL NO  :" + ele.model;
+    model.innerHTML = "MODEL NO : " + ele.model;
     div5.append(model);
     let div6 = document.createElement("div");
     div6.setAttribute("id", "div6");
     let inclu = document.createElement("p");
     inclu.innerText = "(incl. of all taxes)";
     let price = document.createElement("h4");
-    price.innerHTML = "MRP RS. " + ele.price + "/- Only";
+    price.innerHTML = "MRP Rs. " + ele.price + "/- Only";
     div6.append(price, inclu);
     let div7 = document.createElement("div");
     div7.setAttribute("id", "div7");
@@ -94,9 +97,17 @@ function appendproduct(data) {
     button.innerText = "BUY";
     div7.append(button);
 
+    let pro = "TELEVISIONS";
+
     button.addEventListener("click", function(){
-      window.open(ele.buy,'_blank');
+      localStorage.setItem("singleProduct", JSON.stringify(ele));
+      localStorage.setItem("productType", JSON.stringify(pro));
+      window.location.href = "singlep.html";
     });
+
+    // button.addEventListener("click", function () {
+    //   window.open(ele.buy, "_blank");
+    // });
     // let div8 = document.createElement("div");
     // div8.setAttribute("id", "div8");
     // let sizeop = document.createElement("select");
@@ -130,19 +141,17 @@ function appendproduct(data) {
 var filterBtn = document.querySelector(".filterBtn");
 var fDiv = document.querySelector("#fDiv");
 
-
-filterBtn.addEventListener("click",function(){
-  if(fDiv.style.opacity == 0){
+filterBtn.addEventListener("click", function () {
+  if (fDiv.style.opacity == 0) {
     filterBtn.style.backgroundColor = "#2f353d";
     fDiv.style.opacity = 1;
     fDiv.style.height = "300px";
-  }
-  else{
+  } else {
     filterBtn.style.backgroundColor = "orangered";
     fDiv.style.opacity = 0;
     fDiv.style.height = "0px";
   }
-})
+});
 
 let filterDiv = document.querySelector("#filterDiv");
 
@@ -165,7 +174,7 @@ tel1.style.backgroundColor = "white";
 p1.style.color = "orangered";
 // appendproduct(arr);
 
-tel1.addEventListener("click", function(){
+tel1.addEventListener("click", function () {
   getdata.innerHTML = "";
   tel1.style.backgroundColor = "white";
   p1.style.color = "orangered";
@@ -181,9 +190,9 @@ tel1.addEventListener("click", function(){
   p6.style.color = "black";
 
   appendproduct(arr);
-})
+});
 
-oled.addEventListener('click',function(){
+oled.addEventListener("click", function () {
   getdata.innerHTML = "";
   tel1.style.backgroundColor = "rgb(228, 231, 235)";
   p1.style.color = "black";
@@ -198,17 +207,20 @@ oled.addEventListener('click',function(){
   head.style.backgroundColor = "rgb(228, 231, 235)";
   p6.style.color = "black";
 
-  var oledarr = [];
-  arr.map(function(ele){
-    if(ele.tv_type.OLED == true){
-      oledarr.push(ele);
+  let oledarr = [];
+  arr.map(function (ele) {
+    let tvtype = ele.tv_type;
+    for (let i = 0; i < tvtype.length; i++) {
+      if (tvtype[i] == "OLED") {
+        oledarr.push(ele);
+      }
     }
   });
 
   appendproduct(oledarr);
 });
 
-farr.addEventListener('click',function(){
+farr.addEventListener("click", function () {
   getdata.innerHTML = "";
   tel1.style.backgroundColor = "rgb(228, 231, 235)";
   p1.style.color = "black";
@@ -223,17 +235,20 @@ farr.addEventListener('click',function(){
   head.style.backgroundColor = "rgb(228, 231, 235)";
   p6.style.color = "black";
 
-  var farrarr = [];
-  arr.map(function(ele){
-    if(ele.tv_type.Full_Array_LED == true){
-      farrarr.push(ele);
+  let farrarr = [];
+  arr.map(function (ele) {
+    let tvtype = ele.tv_type;
+    for (let i = 0; i < tvtype.length; i++) {
+      if (tvtype[i] == "Full_Array_LED") {
+        farrarr.push(ele);
+      }
     }
   });
 
   appendproduct(farrarr);
 });
 
-aled.addEventListener('click',function(){
+aled.addEventListener("click", function () {
   getdata.innerHTML = "";
   tel1.style.backgroundColor = "rgb(228, 231, 235)";
   p1.style.color = "black";
@@ -248,17 +263,20 @@ aled.addEventListener('click',function(){
   head.style.backgroundColor = "rgb(228, 231, 235)";
   p6.style.color = "black";
 
-  var aledarr = [];
-  arr.map(function(ele){
-    if(ele.tv_type.LED_Display == true){
-      aledarr.push(ele);
+  let aledarr = [];
+  arr.map(function (ele) {
+    let tvtype = ele.tv_type;
+    for (let i = 0; i < tvtype.length; i++) {
+      if (tvtype[i] == "LED_Display") {
+        aledarr.push(ele);
+      }
     }
   });
 
   appendproduct(aledarr);
 });
 
-gtv.addEventListener('click',function(){
+gtv.addEventListener("click", function () {
   getdata.innerHTML = "";
   tel1.style.backgroundColor = "rgb(228, 231, 235)";
   p1.style.color = "black";
@@ -273,10 +291,13 @@ gtv.addEventListener('click',function(){
   head.style.backgroundColor = "rgb(228, 231, 235)";
   p6.style.color = "black";
 
-  var gtvarr = [];
-  arr.map(function(ele){
-    if(ele.tv_type.Google_tv == true){
-      gtvarr.push(ele);
+  let gtvarr = [];
+  arr.map(function (ele) {
+    let tvtype = ele.tv_type;
+    for (let i = 0; i < tvtype.length; i++) {
+      if (tvtype[i] == "Google_tv") {
+        gtvarr.push(ele);
+      }
     }
   });
   appendproduct(gtvarr);
@@ -288,15 +309,14 @@ let screenbtn2 = document.querySelector("#g51-60");
 let screenbtn3 = document.querySelector("#g61-70");
 let screenbtn4 = document.querySelector("#g71");
 
-screenbtn1.addEventListener("click",function(){
+screenbtn1.addEventListener("click", function () {
   getdata.innerHTML = "";
 
-  if(screenbtn1.style.color == "white"){
+  if (screenbtn1.style.color == "white") {
     screenbtn1.style.backgroundColor = "white";
     screenbtn1.style.color = "black";
     appendproduct(arr);
-  }
-  else{  
+  } else {
     screenbtn1.style.backgroundColor = "#2f353d";
     screenbtn1.style.color = "white";
     screenbtn2.style.backgroundColor = "white";
@@ -306,29 +326,32 @@ screenbtn1.addEventListener("click",function(){
     screenbtn4.style.backgroundColor = "white";
     screenbtn4.style.color = "black";
 
-    var screen1arr = [];
-    arr.map(function(ele){
-      var a = ele.size;
-      var s = Object.values(a);
-      if(s[0] == true || s[1] == true || s[2] == true){
-        if(s[3] == false && s[4] == false && s[5] == false && s[6] == false){
-          screen1arr.push(ele);
+    let screen1arr = [];
+    arr.map(function (ele) {
+      let a = ele.size.map(Number);
+      let flag = false;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] > 50) {
+          flag = true;
         }
+      }
+
+      if (flag == false) {
+        screen1arr.push(ele);
       }
     });
     appendproduct(screen1arr);
   }
 });
 
-screenbtn2.addEventListener("click",function(){
+screenbtn2.addEventListener("click", function () {
   getdata.innerHTML = "";
 
-  if(screenbtn2.style.color == "white"){
+  if (screenbtn2.style.color == "white") {
     screenbtn2.style.backgroundColor = "white";
     screenbtn2.style.color = "black";
     appendproduct(arr);
-  }
-  else{
+  } else {
     screenbtn1.style.backgroundColor = "white";
     screenbtn1.style.color = "black";
     screenbtn2.style.backgroundColor = "#2f353d";
@@ -338,11 +361,17 @@ screenbtn2.addEventListener("click",function(){
     screenbtn4.style.backgroundColor = "white";
     screenbtn4.style.color = "black";
 
-    var screen2arr = [];
-    arr.map(function(ele){
-      var a = ele.size;
-      var s = Object.values(a);
-      if(s[3] == true){
+    let screen2arr = [];
+    arr.map(function (ele) {
+      let a = ele.size.map(Number);
+      let flag = false;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] > 51 && a[i] < 60) {
+          flag = true;
+        }
+      }
+
+      if (flag == true) {
         screen2arr.push(ele);
       }
     });
@@ -350,15 +379,14 @@ screenbtn2.addEventListener("click",function(){
   }
 });
 
-screenbtn3.addEventListener("click",function(){
+screenbtn3.addEventListener("click", function () {
   getdata.innerHTML = "";
 
-  if(screenbtn3.style.color == "white"){
+  if (screenbtn3.style.color == "white") {
     screenbtn3.style.backgroundColor = "white";
     screenbtn3.style.color = "black";
     appendproduct(arr);
-  }
-  else{
+  } else {
     screenbtn1.style.backgroundColor = "white";
     screenbtn1.style.color = "black";
     screenbtn2.style.backgroundColor = "white";
@@ -368,11 +396,17 @@ screenbtn3.addEventListener("click",function(){
     screenbtn4.style.backgroundColor = "white";
     screenbtn4.style.color = "black";
 
-    var screen3arr = [];
-    arr.map(function(ele){
-      var a = ele.size;
-      var s = Object.values(a);
-      if(s[4] == true){
+    let screen3arr = [];
+    arr.map(function (ele) {
+      let a = ele.size.map(Number);
+      let flag = false;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] > 61 && a[i] < 70) {
+          flag = true;
+        }
+      }
+
+      if (flag == true) {
         screen3arr.push(ele);
       }
     });
@@ -380,15 +414,14 @@ screenbtn3.addEventListener("click",function(){
   }
 });
 
-screenbtn4.addEventListener("click",function(){
+screenbtn4.addEventListener("click", function () {
   getdata.innerHTML = "";
 
-  if(screenbtn4.style.color == "white"){
+  if (screenbtn4.style.color == "white") {
     screenbtn4.style.backgroundColor = "white";
     screenbtn4.style.color = "black";
     appendproduct(arr);
-  }
-  else{
+  } else {
     screenbtn1.style.backgroundColor = "white";
     screenbtn1.style.color = "black";
     screenbtn2.style.backgroundColor = "white";
@@ -398,11 +431,17 @@ screenbtn4.addEventListener("click",function(){
     screenbtn4.style.backgroundColor = "#2f353d";
     screenbtn4.style.color = "white";
 
-    var screen4arr = [];
-    arr.map(function(ele){
-      var a = ele.size;
-      var s = Object.values(a);
-      if(s[5] == true){
+    let screen4arr = [];
+    arr.map(function (ele) {
+      let a = ele.size.map(Number);
+      let flag = false;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] > 71) {
+          flag = true;
+        }
+      }
+
+      if (flag == true) {
         screen4arr.push(ele);
       }
     });
@@ -414,50 +453,47 @@ let rescheck1 = document.querySelector("#res8k");
 let rescheck2 = document.querySelector("#res4k");
 let rescheck3 = document.querySelector("#reshd");
 
-rescheck1.addEventListener("change", function(){
+rescheck1.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var res8karr = [];
-    arr.map(function(ele){
-      if(ele.resolution == "8KHDR"){
+  if (this.checked) {
+    let res8karr = [];
+    arr.map(function (ele) {
+      if (ele.resolution == "8KHDR") {
         res8karr.push(ele);
       }
     });
     appendproduct(res8karr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-rescheck2.addEventListener("change", function(){
+rescheck2.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var res4karr = [];
-    arr.map(function(ele){
-      if(ele.resolution == "4KHDR"){
+  if (this.checked) {
+    let res4karr = [];
+    arr.map(function (ele) {
+      if (ele.resolution == "4KHDR") {
         res4karr.push(ele);
       }
     });
     appendproduct(res4karr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-rescheck3.addEventListener("change", function(){
+rescheck3.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var reshdarr = [];
-    arr.map(function(ele){
-      if(ele.resolution == "FULL_HDR"){
+  if (this.checked) {
+    let reshdarr = [];
+    arr.map(function (ele) {
+      if (ele.resolution == "FULL_HDR") {
         reshdarr.push(ele);
       }
     });
     appendproduct(reshdarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
@@ -468,85 +504,95 @@ let type3 = document.querySelector("#typeled");
 let type4 = document.querySelector("#typesmart");
 let type5 = document.querySelector("#typebravia");
 
-type1.addEventListener("change", function(){
+type1.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var oledarr = [];
-    arr.map(function(ele){
-      if(ele.tv_type.OLED == true){
-        oledarr.push(ele);
+  if (this.checked) {
+    let oledarr = [];
+    arr.map(function (ele) {
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "OLED") {
+          oledarr.push(ele);
+        }
       }
     });
     appendproduct(oledarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-type2.addEventListener("change", function(){
+type2.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var farrarr = [];
-    arr.map(function(ele){
-      if(ele.tv_type.Full_Array_LED == true){
-        farrarr.push(ele);
+  if (this.checked) {
+    let farrarr = [];
+    arr.map(function (ele) {
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "Full_Array_LED") {
+          farrarr.push(ele);
+        }
       }
     });
 
     appendproduct(farrarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-type3.addEventListener("change", function(){
+type3.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var aledarr = [];
-    arr.map(function(ele){
-      if(ele.tv_type.LED_Display == true){
-        aledarr.push(ele);
+  if (this.checked) {
+    let aledarr = [];
+    arr.map(function (ele) {
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "LED_Display") {
+          aledarr.push(ele);
+        }
       }
     });
 
     appendproduct(aledarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-type4.addEventListener("change", function(){
+type4.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var smartarr = [];
-    arr.map(function(ele){
-      if(ele.tv_type.Smart_tv == true){
-        smartarr.push(ele);
+  if (this.checked) {
+    let smartarr = [];
+    arr.map(function (ele) {
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "Google_tv") {
+          smartarr.push(ele);
+        }
       }
     });
 
     appendproduct(smartarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-type5.addEventListener("change", function(){
+type5.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var braviaarr = [];
-    arr.map(function(ele){
-      if(ele.tv_type.BRAVIA_XR == true){
-        braviaarr.push(ele);
+  if (this.checked) {
+    let braviaarr = [];
+    arr.map(function (ele) {
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "BRAVIA_XR") {
+          braviaarr.push(ele);
+        }
       }
     });
     appendproduct(braviaarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
@@ -556,15 +602,14 @@ let price2btn = document.querySelector("#g40");
 let price3btn = document.querySelector("#g80");
 let price4btn = document.querySelector("#g150");
 
-price1btn.addEventListener("click",function(){
+price1btn.addEventListener("click", function () {
   getdata.innerHTML = "";
-  if(price1btn.style.color == "white"){
-    price1btn.style.backgroundColor = "white";  
+  if (price1btn.style.color == "white") {
+    price1btn.style.backgroundColor = "white";
     price1btn.style.color = "black";
 
     appendproduct(arr);
-  }
-  else{
+  } else {
     price1btn.style.backgroundColor = "#2f353d";
     price1btn.style.color = "white";
     price2btn.style.backgroundColor = "white";
@@ -574,10 +619,10 @@ price1btn.addEventListener("click",function(){
     price4btn.style.backgroundColor = "white";
     price4btn.style.color = "black";
 
-    var p1arr = [];
-    arr.map(function(ele){
-      let p = (Number)(ele.price);
-      if(p <= 40000){
+    let p1arr = [];
+    arr.map(function (ele) {
+      let p = Number(ele.price);
+      if (p <= 40000) {
         p1arr.push(ele);
       }
     });
@@ -585,15 +630,14 @@ price1btn.addEventListener("click",function(){
   }
 });
 
-price2btn.addEventListener("click",function(){
+price2btn.addEventListener("click", function () {
   getdata.innerHTML = "";
-  if(price2btn.style.color == "white"){
-    price2btn.style.backgroundColor = "white";  
+  if (price2btn.style.color == "white") {
+    price2btn.style.backgroundColor = "white";
     price2btn.style.color = "black";
 
     appendproduct(arr);
-  }
-  else{
+  } else {
     price1btn.style.backgroundColor = "white";
     price1btn.style.color = "black";
     price2btn.style.backgroundColor = "#2f353d";
@@ -603,10 +647,10 @@ price2btn.addEventListener("click",function(){
     price4btn.style.backgroundColor = "white";
     price4btn.style.color = "black";
 
-    var p2arr = [];
-    arr.map(function(ele){
-      let p = (Number)(ele.price);
-      if(p > 40000 && p <= 80000){
+    let p2arr = [];
+    arr.map(function (ele) {
+      let p = Number(ele.price);
+      if (p > 40000 && p <= 80000) {
         p2arr.push(ele);
       }
     });
@@ -614,15 +658,14 @@ price2btn.addEventListener("click",function(){
   }
 });
 
-price3btn.addEventListener("click",function(){
+price3btn.addEventListener("click", function () {
   getdata.innerHTML = "";
-  if(price3btn.style.color == "white"){
-    price3btn.style.backgroundColor = "white";  
+  if (price3btn.style.color == "white") {
+    price3btn.style.backgroundColor = "white";
     price3btn.style.color = "black";
 
     appendproduct(arr);
-  }
-  else{
+  } else {
     price1btn.style.backgroundColor = "white";
     price1btn.style.color = "black";
     price2btn.style.backgroundColor = "white";
@@ -632,10 +675,10 @@ price3btn.addEventListener("click",function(){
     price4btn.style.backgroundColor = "white";
     price4btn.style.color = "black";
 
-    var p3arr = [];
-    arr.map(function(ele){
-      let p = (Number)(ele.price);
-      if(p > 80000 && p <= 150000){
+    let p3arr = [];
+    arr.map(function (ele) {
+      let p = Number(ele.price);
+      if (p > 80000 && p <= 150000) {
         p3arr.push(ele);
       }
     });
@@ -643,15 +686,14 @@ price3btn.addEventListener("click",function(){
   }
 });
 
-price4btn.addEventListener("click",function(){
+price4btn.addEventListener("click", function () {
   getdata.innerHTML = "";
-  if(price4btn.style.color == "white"){
-    price4btn.style.backgroundColor = "white";  
+  if (price4btn.style.color == "white") {
+    price4btn.style.backgroundColor = "white";
     price4btn.style.color = "black";
 
     appendproduct(arr);
-  }
-  else{
+  } else {
     price1btn.style.backgroundColor = "white";
     price1btn.style.color = "black";
     price2btn.style.backgroundColor = "white";
@@ -661,10 +703,10 @@ price4btn.addEventListener("click",function(){
     price4btn.style.backgroundColor = "#2f353d";
     price4btn.style.color = "white";
 
-    var p4arr = [];
-    arr.map(function(ele){
-      let p = (Number)(ele.price);
-      if(p > 150000){
+    let p4arr = [];
+    arr.map(function (ele) {
+      let p = Number(ele.price);
+      if (p > 150000) {
         p4arr.push(ele);
       }
     });
@@ -677,79 +719,74 @@ let sorthigh = document.querySelector("#sorthigh");
 let sortlow = document.querySelector("#sortlow");
 let sortnew = document.querySelector("#sortnew");
 
-sortfeatured.addEventListener("change",function(){
+sortfeatured.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var featarr = [];
-    arr.map(function(ele){
-      if(ele.tv_type.Google_tv == true){
-        featarr.push(ele);
+  if (this.checked) {
+    let featarr = [];
+    arr.map(function (ele) {
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "Google_tv") {
+          featarr.push(ele);
+        }
       }
     });
     appendproduct(featarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-sorthigh.addEventListener("change",function(){
+sorthigh.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
+  if (this.checked) {
     let higharr = arr;
-    higharr.sort((a,b) => {
-      return b.price - a.price; 
+    higharr.sort((a, b) => {
+      return b.price - a.price;
     });
     appendproduct(higharr);
-  }
-  else{
+  } else {
     let narr = JSON.parse(localStorage.getItem("products"));
     appendproduct(narr);
   }
 });
 
-sortlow.addEventListener("change",function(){
+sortlow.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
+  if (this.checked) {
     let lowarr = arr;
-    lowarr.sort((a,b) => {
-      return a.price - b.price; 
+    lowarr.sort((a, b) => {
+      return a.price - b.price;
     });
     appendproduct(lowarr);
-  }
-  else{
+  } else {
     let narr = JSON.parse(localStorage.getItem("products"));
     appendproduct(narr);
   }
 });
 
-sortnew.addEventListener("change",function(){
+sortnew.addEventListener("change", function () {
   getdata.innerHTML = "";
-  if(this.checked){
-    var newarr = [];
+  if (this.checked) {
+    let newarr = [];
     arr.forEach((ele) => {
-      if(ele.tv_type.BRAVIA_XR == true){
-        newarr.push(ele);
+      let tvtype = ele.tv_type;
+      for (let i = 0; i < tvtype.length; i++) {
+        if (tvtype[i] == "BRAVIA_XR") {
+          newarr.push(ele);
+        }
       }
-    })
+    });
     appendproduct(newarr);
-  }
-  else{
+  } else {
     appendproduct(arr);
   }
 });
 
-head.addEventListener("click",function(){
+head.addEventListener("click", function () {
   window.location.href = "headphones.html";
-})
+});
 
-mp3p.addEventListener("click",function(){
+mp3p.addEventListener("click", function () {
   window.location.href = "musicp.html";
-})
-
-
-
-
-
-
-
+});

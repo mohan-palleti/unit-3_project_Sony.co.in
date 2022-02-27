@@ -1,44 +1,63 @@
 //to Add TV Items
 async function addProduct() {
   try {
-    let data = {
-      tv_type: {
-        id: document.getElementById("model_number").value,
-        OLED: document.getElementById("OLED").checked,
-        Full_Array_LED: document.getElementById("Full_array_LED").checked,
-        LED_Display: document.getElementById("LED_display").checked,
-        Smart_tv: document.getElementById("Smart_tv").checked,
-        Google_tv: document.getElementById("Google_tv").checked,
-        HDMI: document.getElementById("HDMI_2.1").checked,
-        BRAVIA_XR: document.getElementById("BRAVIA_XR").checked,
-        MASTER_Series: document.getElementById("MASTER_Series").checked,
-      },
-      resolution: document.getElementById("resolution").value,
-      size: {
-        32: document.getElementById("32").checked,
-        43: document.getElementById("43").checked,
-        50: document.getElementById("50").checked,
+    let types = {
+      id: document.getElementById("model_number").value,
+      OLED: document.getElementById("OLED").checked,
+      Full_Array_LED: document.getElementById("Full_array_LED").checked,
+      LED_Display: document.getElementById("LED_display").checked,
+      Smart_tv: document.getElementById("Smart_tv").checked,
+      Google_tv: document.getElementById("Google_tv").checked,
+      HDMI: document.getElementById("HDMI_2.1").checked,
+      BRAVIA_XR: document.getElementById("BRAVIA_XR").checked,
+      MASTER_Series: document.getElementById("MASTER_Series").checked,
+    };
+    let arr_types = [];
+    for (let x in types) {
+      if (types[x]) {
+        arr_types.push(x);
+      }
+    }
+    let allsize = {
+      32: document.getElementById("32").checked,
+      43: document.getElementById("43").checked,
+      50: document.getElementById("50").checked,
 
-        55: document.getElementById("55").checked,
-        65: document.getElementById("65").checked,
-        75: document.getElementById("75").checked,
-        85: document.getElementById("85").checked,
-      },
+      55: document.getElementById("55").checked,
+      65: document.getElementById("65").checked,
+      75: document.getElementById("75").checked,
+      85: document.getElementById("85").checked,
+    };
+    let sizefilter = [];
+    for (let x in allsize) {
+      if (allsize[x]) {
+        sizefilter.push(x);
+      }
+    }
+    let img = document.getElementById("image_url").value;
+    let i = img.split("@");
+    let data = {
+      tv_type: arr_types,
+      resolution: document.getElementById("resolution").value,
+      size: sizefilter,
       price: document.getElementById("price").value,
       model: document.getElementById("model").value,
-      Image: document.getElementById("image_url").value,
+      Image: i,
       description: document.getElementById("description").value,
       id: document.getElementById("id_tv").value,
       buy: document.getElementById("buy_link_tv").value,
     };
     data = JSON.stringify(data);
-    let response = await fetch("http://127.0.0.1:5000/api/products", {
-      method: "POST",
-      body: data,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      "https://sonyproducts.herokuapp.com/tvProducts",
+      {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     let d = await response.json();
     console.log("data:", d);
@@ -51,12 +70,15 @@ async function deleteProduct() {
   try {
     let id = document.getElementById("delete_id").value;
 
-    let response = await fetch(`http://127.0.0.1:5000/api/products/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      `https://sonyproducts.herokuapp.com/tvProducts/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     let d = await response.json();
     console.log("d:", d);
   } catch (err) {
@@ -64,14 +86,20 @@ async function deleteProduct() {
   }
 }
 //To get_ TV items
+let append_tv_details = document.querySelector("append_tv_details");
 async function get_tv_items() {
   try {
-    let response = await fetch(`http://127.0.0.1:5000/api/products`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    document.getElementById("append_tv_details").innerHTML =
+      "<h2><b>Getting Details...</b></h2>";
+    let response = await fetch(
+      `https://sonyproducts.herokuapp.com/tvProducts`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     let d = await response.json();
     console.log("get:", d);
     append_TV(d);
@@ -79,9 +107,10 @@ async function get_tv_items() {
     console.log("err:", err);
   }
 }
-let append_tv_details = document.querySelector("append_tv_details");
+
 function append_TV(d) {
-  d.forEach((element) => {
+  document.getElementById("append_tv_details").innerHTML = "";
+  d.TV.forEach((element) => {
     let div = document.createElement("div");
     let model = document.createElement("h3");
     let resolution = document.createElement("p");
@@ -89,24 +118,28 @@ function append_TV(d) {
 
     let type = document.createElement("p");
     let size = document.createElement("p");
-    let b = "",
-      g = "";
-    for (let x in element.tv_type) {
-      if (element.tv_type[x] === true) {
-        b += x + " ";
-      }
-    }
-    type.innerHTML = `Type: ${b}`;
+    let id = document.createElement("p");
+    id.innerHTML = `serial number ${element._id} `;
+    let pro_id = document.createElement("p");
+    pro_id.innerHTML = `Product ID ${element.id}`;
+    // let b = "",
+    //   g = "";
+    // for (let x in element.tv_type) {
+    //   if (element.tv_type[x] === true) {
+    //     b += x + " ";
+    //   }
+    // }
+    type.innerHTML = `Type: ${element.tv_type}`;
     model.innerHTML = `Model: ${element.model}`;
     resolution.innerHTML = element.resolution;
     price.innerHTML = `Price:${element.price}`;
-    for (let x in element.size) {
-      if (element.size[x]) {
-        g += x + " ";
-      }
-    }
-    size.innerHTML = `Available Sizes ${g}`;
-    div.append(model, resolution, price, type, size);
+    // for (let x in element.size) {
+    //   if (element.size[x]) {
+    //     g += x + " ";
+    //   }
+    // }
+    size.innerHTML = `Available Sizes ${element.size}`;
+    div.append(model, id, pro_id, resolution, price, type, size);
     document.getElementById("append_tv_details").append(div);
   });
 }
@@ -114,6 +147,8 @@ function append_TV(d) {
 //to Add Items
 async function addmp3() {
   try {
+    let img = document.getElementById("image_url_mp3").value;
+    let i = img.split("@");
     let data = {
       id: document.getElementById("id_mp3").value,
 
@@ -122,12 +157,12 @@ async function addmp3() {
       head_price: document.getElementById("price_mp3").value,
       headphone_model: document.getElementById("model_mp3").value,
 
-      Image: document.getElementById("image_url_mp3").value,
+      Image: i,
       description_head: document.getElementById("description_mp3").value,
       buy: document.getElementById("buy_link_mp3").value,
     };
     data = JSON.stringify(data);
-    let response = await fetch("http://127.0.0.1:5000/api/mp3players", {
+    let response = await fetch("https://sonyproducts.herokuapp.com/mp3player", {
       method: "POST",
       body: data,
       headers: {
@@ -146,12 +181,15 @@ async function deleteMp3() {
   try {
     let id = document.getElementById("delete_id_mp3").value;
 
-    let response = await fetch(`http://127.0.0.1:5000/api/mp3players/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      `https://sonyproducts.herokuapp.com/mp3player/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     let d = await response.json();
     console.log("d:", d);
   } catch (err) {
@@ -161,7 +199,9 @@ async function deleteMp3() {
 // get Mp3 players details
 async function get_mp3_items() {
   try {
-    let response = await fetch(`http://127.0.0.1:5000/api/mp3players`, {
+    document.getElementById("append_MP3").innerHTML =
+      "<h2><b>Getting Details...</b></h2>";
+    let response = await fetch(`https://sonyproducts.herokuapp.com/mp3player`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -176,16 +216,21 @@ async function get_mp3_items() {
 }
 
 function append_MP3(d) {
-  d.forEach((element) => {
+  document.getElementById("append_MP3").innerHTML = "";
+  d.mp3player.forEach((element) => {
     let div = document.createElement("div");
     let name = document.createElement("h3");
     let resolution = document.createElement("p");
     let price = document.createElement("p");
+    let serial_id = document.createElement("p");
+    let ID = document.createElement("p");
+    serial_id.innerHTML = `Serial No ${element._id}`;
+    ID.innerHTML = `ID ${element.id}`;
     name.innerHTML = `Name: ${element.name}`;
     resolution.innerHTML = `Model:${element.model}`;
     price.innerHTML = `Price:${element.price}`;
-
-    div.append(name, resolution, price);
+    let hr = document.createElement("hr");
+    div.append(serial_id, ID, name, resolution, price, hr);
     document.getElementById("append_MP3").append(div);
   });
 }
@@ -195,28 +240,37 @@ function append_MP3(d) {
 //to ADD head phones
 async function addheadphone() {
   try {
+    let head_type = {
+      EXTRA: document.getElementById("EXTRA").checked,
+      BASS: document.getElementById("BASS").checked,
+      WIRELESS: document.getElementById("WIRELESS").checked,
+      MDR_XB450: document.getElementById("MDR-XB450").checked,
+      MDR_ZX110: document.getElementById("MDR-ZX110").checked,
+      WHCH_510: document.getElementById("WHCH-510").checked,
+      XB450BV: document.getElementById("XB450BV").checked,
+    };
+    let head_arr = [];
+    for (let x in head_type) {
+      if (head_type[x] === true) {
+        head_arr.push(x);
+      }
+    }
+    let img = document.getElementById("image_url_head").value;
+    let i = img.split("@");
     let data = {
-      headphones_type: {
-        EXTRA: document.getElementById("EXTRA").checked,
-        BASS: document.getElementById("BASS").checked,
-        WIRELESS: document.getElementById("WIRELESS").checked,
-        MDR_XB450: document.getElementById("MDR-XB450").checked,
-        MDR_ZX110: document.getElementById("MDR-ZX110").checked,
-        WHCH_510: document.getElementById("WHCH-510").checked,
-        XB450BV: document.getElementById("XB450BV").checked,
-      },
+      headphones_type: head_arr,
       resolution: document.getElementById("resolution_head").value,
 
       price: document.getElementById("price_head").value,
       model: document.getElementById("model_head").value,
 
-      Image: document.getElementById("image_url_head").value,
+      Image: i,
       description: document.getElementById("description_head").value,
       id: document.getElementById("id_head").value,
       buy: document.getElementById("buy_link_head").value,
     };
     data = JSON.stringify(data);
-    let response = await fetch("http://127.0.0.1:5000/api/headphones", {
+    let response = await fetch("https://sonyproducts.herokuapp.com/headphone", {
       method: "POST",
       body: data,
       headers: {
@@ -235,22 +289,27 @@ async function deletehead() {
   try {
     let id = document.getElementById("delete_id_head").value;
 
-    let response = await fetch(`http://127.0.0.1:5000/api/headphones/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      `https://sonyproducts.herokuapp.com/headphone/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     let d = await response.json();
     console.log("d:", d);
   } catch (err) {
     console.log("err:", err);
   }
 }
-// get Mp3 players details
+// get Head phone details
 async function get_head_items() {
   try {
-    let response = await fetch(`http://127.0.0.1:5000/api/headphones`, {
+    document.getElementById("append_headphone").innerHTML =
+      "<h2><b>Getting Details...</b></h2>";
+    let response = await fetch(`https://sonyproducts.herokuapp.com/headphone`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -265,16 +324,21 @@ async function get_head_items() {
 }
 
 function append_headphone(d) {
-  d.forEach((element) => {
+  document.getElementById("append_headphone").innerHTML = "";
+  d.headphone.forEach((element) => {
     let div = document.createElement("div");
     let name = document.createElement("h3");
     let resolution = document.createElement("p");
     let price = document.createElement("p");
+    let serial_id = document.createElement("p");
+    let ID = document.createElement("p");
+    serial_id.innerHTML = `Serial No ${element._id}`;
+    ID.innerHTML = `ID ${element.id}`;
     name.innerHTML = `Name: ${element.model}`;
     resolution.innerHTML = `Model:${element.resolution}`;
     price.innerHTML = `Price:${element.price}`;
-
-    div.append(name, resolution, price);
+    let hr = document.createElement("hr");
+    div.append(serial_id, ID, name, resolution, price, hr);
     document.getElementById("append_headphone").append(div);
   });
 }
@@ -327,3 +391,6 @@ function displaymenu(category) {
     headcategory.style.height = "0px";
   }
 }
+
+//https://m.media-amazon.com/images/I/41Uj0CkYn2L._AC_SY580_.jpg@https://m.media-amazon.com/images/I/515kfxFoWkL._AC_SY580_.jpg@https://m.media-amazon.com/images/I/51m3V4zyGEL._AC_SY580_.jpg@https://m.media-amazon.com/images/I/51cjGmsnCPS._AC_SY580_.jpg
+//@https://m.media-amazon.com/images/I/51QLhYPzzXL._AC_SY580_.jpg

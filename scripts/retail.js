@@ -1,6 +1,6 @@
 function getpin(event) {
   event.preventDefault();
-  let pin = document.getElementById("pincode").value;
+  let pin = +document.getElementById("pincode").value;
   if(pin.length == 0){
     alert("Please enter your area pincode.");
   }
