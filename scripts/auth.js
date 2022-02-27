@@ -180,12 +180,11 @@ async function storeSign(e, flag) {
       });
 
       let data = await res.json();
-      if (data.error === true) {
+      if (data.status == false) {
         alert(data.message, (window.location.href = "./register1.html"));
       } else {
         alert(data.message, (window.location.href = "./register3.html"));
       }
-
       console.log("data:", data);
     }
   } catch (err) {
