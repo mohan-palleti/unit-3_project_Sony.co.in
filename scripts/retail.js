@@ -1,8 +1,11 @@
 function getpin(event) {
   event.preventDefault();
   let pin = +document.getElementById("pincode").value;
-  if(pin.length == 0){
+  if(pin == false){
     alert("Please enter your area pincode.");
+  }
+  else if(pin < 100000){
+    alert("Please enter 6 digits pincode number.");
   }
   else{
     pincode(pin);
@@ -24,7 +27,8 @@ async function pincode(PINCODE) {
 
 let pinc = JSON.parse(localStorage.getItem("pincode"));
 let pin = document.getElementById("pincode");
-if(pinc.length != 0){
+
+if(pinc != 0){
   pin.innerHTML = pinc;
   pincode(pinc);
 }

@@ -59,7 +59,5 @@ open.addEventListener("click",()=>{
   topmenu_container.classList.toggle('o_class_top');
 });
 
-let 
-
 
 

@@ -167,13 +167,7 @@ iframe {
   margin-right: auto;
 }
 
-
-@media only screen and (min-width: 392px) and (max-width: 821px){
-
-}
-
-
-@media only screen and (min-width: 0px) and (max-width: 391px) {
+/* @media only screen and (min-width: 0px) and (max-width: 391px) {
   .retail_category {
     
     display: grid;
@@ -193,19 +187,11 @@ iframe {
     height: 30%;
     overflow: hidden;
   }
+} */
  
-  
-  }
-  #pincode{
-    /* border: 2px solid red; */
-    width: 90%;
-  }
- 
-  #onlinestore{
-    margin-top: 50px;
-  }
-
-
+#onlinestore{
+  margin-top: 50px;
+}
 /* ---------b2b and online store----------------- */
 #cont {
   font-family: sans-serif;
@@ -633,41 +619,27 @@ button:hover {
 {
   padding: 10px; border: 1px solid black;
 }
-@media only screen and (min-width:392px) and (max-width: 822px) {
-  #dealer2 > div:nth-child(2) {
-   
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .retail_header {
-   
-    width: 100%;
-    height: 550px;
-    
-  }
-  .retail_category {
-    /* border: 10px solid black; */
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-  
-    gap: 10px;
-   
-  }
-
-  .text-container > a{
-    font-size: 10px;
-  }
-
-  #image_retail img{
-    height: 100%;
-    transform: translateY(0%);
-  }
-
-  #pincode{
-    padding: 10px;
-  }
-}
 
 @media only screen and (min-width: 0px) and (max-width: 391px) {
+  .retail_category {
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 33% 33%;
+    gap: 20px;
+    height: 100%;
+  }
+  .retail_header {
+    width: 100%;
+    height: 1250px;
+    background-color: #e8edf3;
+  }
+  #image_retail {
+    
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+  }
   #authdealer1 {
     /* border: 2px solid red; */
     display: grid;
@@ -710,5 +682,39 @@ button:hover {
   .gmap_canvas{
     height: 300px;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width:392px) and (max-width: 822px) {
+  #dealer2 > div:nth-child(2) {
+   
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .retail_header {
+   
+    width: 100%;
+    height: 550px;
+    
+  }
+  .retail_category {
+    /* border: 10px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  
+    gap: 10px;
+   
+  }
+
+  .text-container > a{
+    font-size: 10px;
+  }
+
+  #image_retail img{
+    height: 100%;
+    transform: translateY(0%);
+  }
+
+  #pincode{
+    padding: 10px;
   }
 }
